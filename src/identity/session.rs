@@ -43,28 +43,32 @@ pub(super) enum SessionCookie<'a> {
     Valid(&'a str),
 }
 pub(super) fn inspect_cookie(headers: &HeaderMap) -> SessionCookie<'_> {
+    // قد يحمل المتصفح نسختين من الكوكي نفسه (بعد تسجيل دخول متكرر أو تغيّر مسار).
+    // الأصلح للمستخدم: نأخذ آخر قيمة صالحة بدل رفض الجلسة كلها.
     let mut token = None;
+    let mut malformed = false;
     for raw in headers.get_all(header::COOKIE) {
-        let Ok(raw) = raw.to_str() else {
-            return SessionCookie::Invalid;
-        };
+        let Ok(raw) = raw.to_str() else { continue };
         for item in raw.split(';') {
             let item = item.trim();
             let Some((key, value)) = item.split_once('=') else {
-                if item == cookie_name() {
-                    return SessionCookie::Invalid;
-                }
                 continue;
             };
-            if key.trim() == cookie_name() {
-                if token.is_some() || !valid_token(value) {
-                    return SessionCookie::Invalid;
-                }
+            if key.trim() != cookie_name() {
+                continue;
+            }
+            if valid_token(value) {
                 token = Some(value);
+            } else {
+                malformed = true;
             }
         }
     }
-    token.map_or(SessionCookie::Missing, SessionCookie::Valid)
+    match (token, malformed) {
+        (Some(token), _) => SessionCookie::Valid(token),
+        (None, true) => SessionCookie::Invalid,
+        (None, false) => SessionCookie::Missing,
+    }
 }
 pub(super) fn cookie_token(headers: &HeaderMap) -> Option<&str> {
     match inspect_cookie(headers) {

@@ -10,6 +10,7 @@ mod identity;
 mod identity_support;
 mod ledger;
 mod periods;
+mod sales;
 mod vouchers;
 use askama::Template;
 use axum::{
@@ -73,6 +74,7 @@ fn init_db(path: &PathBuf) -> Result<(), rusqlite::Error> {
     // ثم يوسّعها نطاق المالية بأعمدة إضافية.
     finance_registry::init_schema(&tx)?;
     finance::init_schema(&tx)?;
+    sales::init_schema(&tx)?;
     tx.commit()
 }
 
@@ -154,6 +156,7 @@ fn app(state: AppState) -> Router {
         .route("/api/accounts/{id}", axum::routing::put(accounts::rename));
     let protected = Router::new()
         .merge(finance::router())
+        .merge(sales::router())
         .merge(legacy)
         .route(
             "/api/vouchers/linked",

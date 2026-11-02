@@ -21,11 +21,11 @@ pub struct ListQuery {
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct NewJournal {
-    company_id: i64,
-    description: String,
-    date: String,
-    currency: String,
-    lines: Vec<domain::LineInput>,
+    pub company_id: i64,
+    pub description: String,
+    pub date: String,
+    pub currency: String,
+    pub lines: Vec<domain::LineInput>,
 }
 
 #[derive(Deserialize)]
@@ -86,12 +86,12 @@ pub async fn list(
     }
 }
 
-pub async fn create(
-    State(state): State<AppState>,
-    axum::Extension(actor): axum::Extension<crate::identity::Principal>,
-    Json(input): Json<NewJournal>,
-) -> Response {
-    let result = (|| -> Result<i64, FinanceError> {
+pub(crate) fn create_draft(
+    state: &AppState,
+    actor: &crate::identity::Principal,
+    input: &NewJournal,
+) -> Result<i64, FinanceError> {
+    (|| -> Result<i64, FinanceError> {
         // العميل يرسل معرّف الحساب؛ نُكمل وسمه من الدليل قبل التحقق الموحّد.
         let mut lines = input.lines.clone();
         {
@@ -122,8 +122,8 @@ pub async fn create(
         .map_err(FinanceError::Invalid)?;
         let mut db = db_open(&state.db)?;
         let tx = db.transaction_with_behavior(TransactionBehavior::Immediate)?;
-        let scope = Scope::resolve(&state, &tx, &actor, input.company_id)?;
-        if !scope.is_admin && !crate::identity::is_current_admin(&tx, &actor)? {
+        let scope = Scope::resolve(state, &tx, actor, input.company_id)?;
+        if !scope.is_admin && !crate::identity::is_current_admin(&tx, actor)? {
             return Err(FinanceError::Forbidden);
         }
         let mut accounts = Vec::with_capacity(input.lines.len());
@@ -200,27 +200,37 @@ pub async fn create(
         )?;
         tx.commit()?;
         Ok(draft_id)
-    })();
-    match result {
+    })()
+}
+
+pub async fn create(
+    State(state): State<AppState>,
+    axum::Extension(actor): axum::Extension<crate::identity::Principal>,
+    Json(input): Json<NewJournal>,
+) -> Response {
+    match create_draft(&state, &actor, &input) {
         Ok(id) => (StatusCode::CREATED, Json(serde_json::json!({"id": id}))).into_response(),
         Err(e) => error_response(e),
     }
 }
 
-pub async fn post(
-    State(state): State<AppState>,
-    axum::Extension(actor): axum::Extension<crate::identity::Principal>,
-    Path(draft_id): Path<i64>,
-    Json(req): Json<PostRequest>,
-) -> Response {
-    let result = (|| -> Result<i64, FinanceError> {
+pub(crate) fn post_draft(
+    state: &AppState,
+    actor: &crate::identity::Principal,
+    company_id: i64,
+    draft_id: i64,
+    dimensions: &[i64],
+    branch_id: Option<i64>,
+) -> Result<i64, FinanceError> {
+    (|| -> Result<i64, FinanceError> {
+        let req = PostRequest { company_id, dimensions: dimensions.to_vec(), branch_id };
         if !state.experimental_posting {
             return Err(FinanceError::Forbidden);
         }
         let mut db = db_open(&state.db)?;
         let tx = db.transaction_with_behavior(TransactionBehavior::Immediate)?;
-        let scope = Scope::resolve(&state, &tx, &actor, req.company_id)?;
-        if !scope.is_admin && !crate::identity::is_current_admin(&tx, &actor)? {
+        let scope = Scope::resolve(state, &tx, actor, req.company_id)?;
+        if !scope.is_admin && !crate::identity::is_current_admin(&tx, actor)? {
             return Err(FinanceError::Forbidden);
         }
         let exists: Option<(Option<i64>, String, String)> = tx
@@ -350,8 +360,16 @@ pub async fn post(
         )?;
         tx.commit()?;
         Ok(entry_id)
-    })();
-    match result {
+    })()
+}
+
+pub async fn post(
+    State(state): State<AppState>,
+    axum::Extension(actor): axum::Extension<crate::identity::Principal>,
+    Path(draft_id): Path<i64>,
+    Json(req): Json<PostRequest>,
+) -> Response {
+    match post_draft(&state, &actor, req.company_id, draft_id, &req.dimensions, req.branch_id) {
         Ok(id) => Json(serde_json::json!({"entry_id": id})).into_response(),
         Err(e) => error_response(e),
     }

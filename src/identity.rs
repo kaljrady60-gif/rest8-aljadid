@@ -189,6 +189,13 @@ pub async fn login(
                 secure_cookie(),
                 preview_partitioned_cookie(),
             );
+            // تنظيف أي كوكي قديم بالاسم الآخر حتى لا تتكرر الجلسات في المتصفح.
+            let stale_name = if preview_partitioned_cookie() {
+                "smart_session"
+            } else {
+                "smart_preview_session"
+            };
+            let stale = format!("{stale_name}=; Path=/; HttpOnly; Max-Age=0");
             let mut body = serde_json::json!({"username":username,"role":role,"csrf":csrf});
             if preview_header_session() {
                 // معاينة فقط: يمكّن العميل من إكمال الجلسة حين يحجب الوسيط الكوكي.
@@ -197,6 +204,9 @@ pub async fn login(
             let mut response = Json(body).into_response();
             if let Ok(value) = HeaderValue::from_str(&cookie) {
                 response.headers_mut().insert(header::SET_COOKIE, value);
+                if let Ok(old) = HeaderValue::from_str(&stale) {
+                    response.headers_mut().append(header::SET_COOKIE, old);
+                }
             } else {
                 return fail(StatusCode::INTERNAL_SERVER_ERROR, "تعذر إنشاء الجلسة.");
             }
@@ -313,9 +323,18 @@ pub async fn logout(
     }) {
         Ok(_) => {
             let cookie = cookie_value("", 0, secure_cookie(), preview_partitioned_cookie());
+            let stale_name = if preview_partitioned_cookie() {
+                "smart_session"
+            } else {
+                "smart_preview_session"
+            };
+            let stale = format!("{stale_name}=; Path=/; HttpOnly; Max-Age=0");
             let mut response = Json(serde_json::json!({"status":"signed_out"})).into_response();
             if let Ok(value) = HeaderValue::from_str(&cookie) {
                 response.headers_mut().insert(header::SET_COOKIE, value);
+                if let Ok(old) = HeaderValue::from_str(&stale) {
+                    response.headers_mut().append(header::SET_COOKIE, old);
+                }
             }
             response
         }
