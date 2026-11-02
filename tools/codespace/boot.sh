@@ -68,9 +68,13 @@ say "٥/٧ تشغيل الجسر"
 BRIDGE_TOKEN=$(python3 -c 'import secrets;print(secrets.token_urlsafe(18))')
 export BRIDGE_TOKEN BRIDGE_PORT
 pkill -f "bridge.py" 2>/dev/null
-setsid nohup python3 "$PROJ/tools/codespace/bridge.py" >"$LOGS/bridge.log" 2>&1 &
-sleep 2
-curl -s -m 5 "http://127.0.0.1:$BRIDGE_PORT/health" | grep -q '"ok":true' && ok "الجسر يعمل على $BRIDGE_PORT" || bad "الجسر لم يبدأ"
+setsid nohup python3 "$PROJ/tools/codespace/bridge.py" >"$LOGS/bridge.log" 2>&1 < /dev/null &
+BRIDGE_OK=0
+for _ in $(seq 1 15); do
+  if curl -s -m 3 "http://127.0.0.1:$BRIDGE_PORT/health" | grep -q '"ok":true'; then BRIDGE_OK=1; break; fi
+  sleep 1
+done
+[ "$BRIDGE_OK" = 1 ] && ok "الجسر يعمل على $BRIDGE_PORT" || bad "الجسر لم يبدأ — راجع $LOGS/bridge.log"
 
 say "٦/٧ فتح الأنفاق"
 tunnel_url() {
