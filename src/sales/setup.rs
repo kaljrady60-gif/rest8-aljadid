@@ -64,6 +64,8 @@ pub async fn get(
         // حسابات الترحيل الفعلية: تُعرض للمالك ليعرف أين يُقيَّد البيع.
         let revenue = common::ensure_revenue_account(&db, cid).ok();
         let tax = common::tax_account(&db, cid);
+        let commission_expense = common::commission_expense_account(&db, cid);
+        let commission_payable = common::commission_payable_account(&db, cid);
         Ok(serde_json::json!({
             "company_id": cid,
             "parties": parties,
@@ -76,6 +78,8 @@ pub async fn get(
             "accounts": {
                 "revenue": revenue.map(|id| common::account_label(&db, cid, id)),
                 "tax": tax.map(|id| common::account_label(&db, cid, id)),
+                "commission_expense": commission_expense.map(|id| common::account_label(&db, cid, id)),
+                "commission_payable": commission_payable.map(|id| common::account_label(&db, cid, id)),
             }
         }))
     })();

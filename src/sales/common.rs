@@ -142,8 +142,11 @@ pub fn ensure_revenue_account(tx: &Connection, company_id: i64) -> Result<i64, F
         company_id,
         "SELECT a.id FROM accounts a
          JOIN finance_account_scopes s ON s.account_id=a.id AND s.company_id=?1
-         WHERE a.kind='detail' AND a.category='revenue' AND a.name LIKE '%مبيعات%'
-         ORDER BY a.code LIMIT 1",
+         WHERE a.kind='detail' AND a.category='revenue'
+           AND a.name LIKE '%إيراد%'
+           AND a.name NOT LIKE '%خصم%' AND a.name NOT LIKE '%مرتجع%' AND a.name NOT LIKE '%مردود%'
+         ORDER BY CASE WHEN a.name LIKE '%مبيعات%' THEN 0 ELSE 1 END, a.code
+         LIMIT 1",
     ) {
         return Ok(id);
     }
@@ -194,7 +197,7 @@ pub fn commission_payable_account(db: &Connection, company_id: i64) -> Option<i6
         "SELECT a.id FROM accounts a
          JOIN finance_account_scopes s ON s.account_id=a.id AND s.company_id=?1
          WHERE a.kind='detail' AND a.category='liability'
-           AND (a.name LIKE '%عمول%' OR a.name LIKE '%مستحق%' OR a.name LIKE '%دائن%')
+           AND a.name LIKE '%عمول%' 
          ORDER BY a.code LIMIT 1",
     )
 }
