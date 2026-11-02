@@ -1,0 +1,14 @@
+<div class="kpi-row" id="draft-kpis" aria-label="ملخص المسودات"><div class="kpi-card"><span>عدد المسودات</span><strong>—</strong><small>جارٍ الحساب</small></div></div>
+<section id="view-journals" class="detail-view hidden">
+<div class="detail-banner">
+<div><span class="detail-kicker">المالية / القيود اليومية</span><h2>مسودات القيود اليومية</h2><p>أنشئ قيدًا متوازنًا من حسابات الدليل واحفظه كمسودة. لا تؤثر المسودات في أي رصيد.</p></div><button class="primary-btn" id="open-draft"><svg><use href="#i-plus"/></svg> مسودة قيد جديد</button></div>
+<div class="table-card">
+<div class="table-head">
+<div><h3>المسودات المحفوظة</h3><p>البيانات محفوظة محليًا في قاعدة بيانات النسخة التجريبية.</p></div><button class="ghost-btn" id="reload-drafts">تحديث ↻</button></div>
+<div class="draft-toolbar"><label for="draft-search">بحث في المسودات المعروضة</label><input id="draft-search" type="search" placeholder="الرقم أو البيان أو العملة" data-help="تبحث في أول مئة مسودة محمّلة فقط، ولا تشمل سطور الحسابات."><span id="draft-search-count" role="status"></span></div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th data-help="رقم المسودة في قاعدة البيانات المحلية.">الرقم</th><th data-help="وصف العملية كما أدخله المستخدم.">البيان</th><th data-help="تاريخ المستند.">التاريخ</th><th data-help="عملة القيد.">العملة</th><th data-help="إجمالي المدين المتوازن مع الدائن.">الإجمالي</th><th data-help="حالة المستند الحالية.">الحالة</th><th data-help="فتح تفاصيل المسودة وسطورها المحفوظة.">التفاصيل</th></tr></thead>
+<tbody id="draft-list"></tbody></table></div>
+<div id="empty-drafts" class="empty"><span>▤</span><b id="empty-drafts-title">لا توجد مسودات بعد</b><p id="empty-drafts-text">ابدأ بإضافة مسودة قيد جديدة، وستظهر هنا.</p></div><p class="draft-limit-note">البحث ضمن أول ١٠٠ مسودة محمّلة فقط؛ لا يشمل جميع السجلات ولا أسماء الحسابات.</p></div></section>

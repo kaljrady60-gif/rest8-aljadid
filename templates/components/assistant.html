@@ -1,0 +1,14 @@
+<aside class="assistant-panel" aria-label="لوحة المحادثة"><button type="button" class="assistant-resize-width resize-handle" aria-label="تغيير عرض المحادثة" data-help="اسحب جانب المحادثة لتغيير عرضها، أو استخدم مفاتيح الأسهم. لا يتغير العرض في التخطيط العمودي الصغير."></button>
+<div class="assistant-head">
+<div class="assistant-mark">✦<span>✧</span></div>
+<div><h2>المساعد الذكي</h2><p>مساعدك الذكي في المحاسبة</p></div>
+<div class="assistant-controls"><button type="button" id="assistant-minimize" class="assistant-control" aria-label="تصغير لوحة المحادثة" aria-expanded="true" data-help="تصغير لوحة المحادثة أو إعادتها دون حذف الرسائل.">−</button><button type="button" id="assistant-maximize" class="assistant-control" aria-label="تكبير لوحة المحادثة" aria-pressed="false" data-help="تكبير المحادثة داخل مساحة العرض أو استعادتها.">▢</button><button id="assistant-info" class="more" data-help="المحادثة إرشادية محلية؛ لم يتم ربط نموذج ذكاء اصطناعي بعد." aria-label="معلومات عن المساعد">•••</button></div></div>
+<div class="assistant-status"><span class="status-light"></span> وضع إرشادي <span class="assistant-badge">تجريبي</span></div>
+<div class="chat-area" id="chat-area">
+<div class="chat-row">
+<div class="bot-avatar">✦</div>
+<div class="bubble"><b>مرحبًا بك! ✦</b><p>أنا هنا لمساعدتك على التنقل في النظام. ماذا ترغب أن تفعل اليوم؟</p><small>المساعد الإرشادي</small></div></div>
+<div class="suggest-label">يمكنك البدء بـ</div><button class="suggestion" data-action="journals"><span class="suggest-icon">▤</span><span>عرض مسودات القيود<small>إنشاء قيد ومراجعة المسودات</small></span><span>←</span></button><button class="suggestion" data-action="finance"><span class="suggest-icon teal">◈</span><span>استكشاف الإدارة المالية<small>الحسابات والقيود والتقارير</small></span><span>←</span></button><button class="suggestion" data-action="split"><span class="suggest-icon violet">▥</span><span>فتح نافذتين بجانب بعض<small>تنقل بسهولة بين الإدارات</small></span><span>←</span></button>
+<div class="assistant-footnote"><span>✧</span> الربط مع Ollama والمزودات السحابية والصوت سيُضاف في مراحل لاحقة.</div></div>
+<form id="chat-form" class="chat-input"><input id="chat-text" type="text" placeholder="اكتب طلبك هنا..." aria-label="رسالة للمساعد" data-help="اكتب طلب تنقل؛ هذا المساعد إرشادي وليس نموذج ذكاء اصطناعي." maxlength="250"><button aria-label="إرسال الرسالة" data-help="أرسل رسالتك للمساعد الإرشادي.">➤</button></form>
+<div class="chat-disclaimer">مساعد إرشادي • لا ينفذ معاملات مالية</div><button type="button" class="assistant-resize-height resize-handle" aria-label="تغيير ارتفاع المحادثة" data-help="اسحب الحافة السفلية أو استخدم الأسهم لتغيير الارتفاع."></button></aside>

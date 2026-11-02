@@ -1,0 +1,151 @@
+/* 15-actions.css — تمييز لوني للأزرار ومبالغ المدين/الدائن بنفس دلالات المرجع.
+   المرجع يستخدم أربع دلالات: accent للأساسي · bad للهلاك · gold للتحذير · ok للنجاح.
+   نستعمل نفس الدلالات بملمسنا (فيروزي لا كحلي) مع عمق ثلاثي الأبعاد. */
+
+:root {
+  --act-primary: #0f766e;
+  --act-primary-edge: #0b544e;
+  --act-danger: #b3261e;
+  --act-danger-edge: #8a1c16;
+  --act-warn: #a26a00;
+  --act-warn-edge: #7d5100;
+  --act-success: #157347;
+  --act-success-edge: #0f5634;
+  --act-neutral: #f2f4f6;
+  --act-neutral-edge: #c9ced5;
+  --act-ink: #1f2a33;
+  --amount-debit: #0b5e8a;
+  --amount-credit: #9c231c;
+}
+
+/* ── الأساس: كل زر في المالية يأخذ شكلاً واحدًا ثم يُلوَّن بحسب دلالته ── */
+.fp-btn,
+.fp-primary,
+.fp-ghost,
+.fp-link,
+.mini-btn,
+.fp-act {
+  border-radius: 12px;
+  font-weight: 700;
+  inline-size: auto;
+  min-block-size: 38px;
+  padding-inline: 16px;
+  border: 1px solid var(--act-primary-edge);
+  box-shadow: 0 3px 0 var(--act-primary-edge), 0 8px 16px -8px rgba(16, 24, 40, .45);
+  transition: transform .08s ease, box-shadow .12s ease, filter .12s ease;
+}
+
+.fp-btn:active,
+.fp-primary:active,
+.fp-ghost:active,
+.fp-act:active,
+.mini-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--act-primary-edge), 0 4px 8px -6px rgba(16, 24, 40, .5);
+}
+
+/* الأساسي: الفعل الرئيسي في الشاشة (حفظ · ترحيل · احتساب) */
+.fp-primary,
+.fp-btn:not(.fp-ghost):not(.fp-danger):not(.fp-warn):not(.fp-success):not(.act-neutral),
+.fp-act.act-primary {
+  background: linear-gradient(180deg, #17968b, var(--act-primary));
+  color: #fff;
+}
+
+/* الحيادي: فعل ثانوي لا يغيّر بيانات (إلغاء · عرض · تحديث · إضافة سطر) */
+.fp-ghost,
+.fp-act.act-neutral,
+.mini-btn {
+  background: linear-gradient(180deg, #ffffff, var(--act-neutral));
+  color: var(--act-ink);
+  border-color: var(--act-neutral-edge);
+  box-shadow: 0 2px 0 var(--act-neutral-edge), 0 6px 12px -8px rgba(16, 24, 40, .35);
+}
+
+/* الخطر: فعل لا رجعة فيه (حذف · أرشفة · رفض · فك ربط · إلغاء مستند) */
+.fp-danger,
+.fp-act.act-danger {
+  background: linear-gradient(180deg, #d33b31, var(--act-danger));
+  color: #fff;
+  border-color: var(--act-danger-edge);
+  box-shadow: 0 3px 0 var(--act-danger-edge), 0 8px 16px -8px rgba(138, 28, 22, .5);
+}
+
+/* التحذير: فعل يقلب أثرًا محاسبيًا (قيد عكسي · إعادة فتح فترة · تراجع عن ترحيل) */
+.fp-warn,
+.fp-act.act-warn {
+  background: linear-gradient(180deg, #d18f14, var(--act-warn));
+  color: #fff;
+  border-color: var(--act-warn-edge);
+  box-shadow: 0 3px 0 var(--act-warn-edge), 0 8px 16px -8px rgba(125, 81, 0, .45);
+}
+
+/* النجاح: فعل إتمام مرحلي (اعتماد · تقديم · إقفال · تأكيد استلام) */
+.fp-success,
+.fp-act.act-success {
+  background: linear-gradient(180deg, #1c9b62, var(--act-success));
+  color: #fff;
+  border-color: var(--act-success-edge);
+  box-shadow: 0 3px 0 var(--act-success-edge), 0 8px 16px -8px rgba(15, 86, 52, .45);
+}
+
+/* الروابط النصية تبقى خفيفة: لا تُلبس ثوب الزر */
+.fp-link {
+  background: none;
+  border: none;
+  box-shadow: none;
+  min-block-size: auto;
+  padding-inline: 6px;
+  color: var(--act-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.fp-link:hover { color: var(--act-primary-edge); }
+
+/* حالات معطّلة: بلا وهج ولا ظل ملوّن */
+.fp-btn:disabled, .fp-primary:disabled, .fp-ghost:disabled,
+.fp-act:disabled, .mini-btn:disabled {
+  filter: grayscale(.55) brightness(1.02);
+  opacity: .65;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ── المبالغ: المدين والدائن بلونين مختلفين كما في بطاقة القيد بالمرجع ── */
+.fp-amount-debit, .fp-table .amt-debit, .jl-debit { color: var(--amount-debit) !important; font-weight: 800; }
+.fp-amount-credit, .fp-table .amt-credit, .jl-credit { color: var(--amount-credit) !important; font-weight: 800; }
+
+/* ── بيان القيد: هوية المستند أوضح من التفاصيل ── */
+.fp-doc-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #12313d;
+  line-height: 1.5;
+}
+.fp-doc-kind {
+  background: #e2f1ef;
+  color: #0b544e;
+  border: 1px solid #b7d9d5;
+  border-radius: 9px;
+  padding: 2px 9px;
+  font-size: .85rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.fp-doc-no {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  direction: ltr;
+  color: #0b544e;
+  font-weight: 800;
+}
+.fp-doc-party { font-weight: 700; color: #26343c; }
+.fp-doc-sep { color: #98a3ab; }
+
+/* بطاقات القيود: تُبرز البيان كما في بطاقة المرجع (بيان ثم سطور ثم إجمالي وأزرار) */
+.fp-doc-card .fp-doc-line { margin-block-end: 6px; }
+.fp-doc-card { border-inline-start: 4px solid var(--act-primary); }

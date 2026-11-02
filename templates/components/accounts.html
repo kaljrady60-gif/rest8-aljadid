@@ -1,0 +1,11 @@
+<section id="view-accounts" class="detail-view hidden">
+<div class="detail-banner">
+<div><span class="detail-kicker">المالية / دليل الحسابات</span><h2>دليل الحسابات التجريبي</h2><p>أنشئ حسابات رئيسية وتفصيلية، واستعرض الشجرة. المسودات الجديدة تختار حساباتها من الدليل؛ الترحيل، إن فُعّل، تجريبي فقط.</p></div><button class="primary-btn" id="account-new"><svg><use href="#i-plus"/></svg> حساب جديد</button></div>
+<div class="account-notice">تجربة تأسيسية: اختر شركة لرؤية دليلها مستقلًا. تبقى الحسابات القديمة غير المسندة في اختيار منفصل. لا توجد صلاحيات أو تقارير شاملة بعد. لا تستخدم بيانات فعلية.</div>
+<div class="account-workspace">
+<div class="account-tree-panel">
+<div class="account-head">
+<div><h3>شجرة الحسابات</h3><p id="account-count">جارٍ التحميل...</p></div></div><label class="account-search-label" for="account-search">بحث بالرقم أو الاسم</label><input id="account-search" type="search" placeholder="اكتب رقم الحساب أو اسمه" data-help="ابحث في الحسابات المحمّلة؛ تظهر الحسابات الأب لتوضيح التدرج.">
+<label class="account-search-label" for="account-company-filter">نطاق الدليل</label><select id="account-company-filter" data-help="اختر شركة واحدة، أو الحسابات غير المسندة؛ لا توجد قائمة مدمجة في هذه النسخة."><option value="">غير مسند — تجريبي</option></select>
+<div id="account-tree" aria-live="polite"></div></div>
+<div class="account-inspector" id="account-inspector"><h3>تفاصيل الحساب</h3><p>اختر حسابًا من الشجرة لعرض تفاصيله.</p></div></div></section>

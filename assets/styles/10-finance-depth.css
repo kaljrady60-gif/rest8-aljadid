@@ -1,0 +1,122 @@
+/* Finance-specific depth. Colors retain the existing contrast and state labels. */
+.finance-room-header {
+  background: linear-gradient(145deg, #ffffff 0%, #f4f9fd 62%, #e8f2f8 100%);
+  box-shadow: inset 0 1px 0 #ffffff, 0 5px 0 #a4b7c6, 0 15px 28px #1b345529;
+}
+
+.finance-room-art {
+  background: linear-gradient(145deg, #ffffff, #d6e9f6);
+  box-shadow: inset 0 1px 1px #ffffff, 0 4px 0 #aec4d3, 0 9px 16px #284b6a35;
+}
+
+.finance-indicators > div {
+  background: linear-gradient(150deg, #ffffff 0%, #f4f9fc 65%, #e8f3f8 100%);
+  box-shadow: inset 0 1px 0 #ffffff, 0 4px 0 #a8bfce, 0 9px 14px #29445c24;
+}
+
+.finance-tab-bar {
+  background: linear-gradient(160deg, #d7e5ee, #c1d3e0 52%, #e4f0f6);
+  box-shadow: inset 0 1px 1px #ffffffa8, 0 4px 0 #91aabd, 0 8px 16px #233e5926;
+}
+
+.finance-tab-bar button {
+  box-shadow: inset 0 1px 0 #ffffff, 0 3px 0 #b1c6d4, 0 5px 9px #24445e18;
+}
+
+.finance-tab-bar button.active {
+  background: linear-gradient(170deg, #4b9bf0 0%, #1471cf 52%, #075caf 100%);
+  box-shadow: inset 0 1px 0 #c7e6ff88, 0 4px 0 #064987, 0 7px 11px #163e6d3d;
+}
+
+.finance-screen-heading {
+  background: linear-gradient(170deg, #2a70ac 0%, #1a578c 55%, #123e6b 100%);
+  box-shadow: inset 0 1px 0 #c4e6ff70, inset 0 -2px 0 #123c63;
+}
+
+.finance-mode .detail-view {
+  background: linear-gradient(155deg, #f3f9fc, #e3eff6);
+  box-shadow: inset 0 1px 0 #ffffff, 0 5px 0 #9db3c2, 0 11px 20px #203a5430;
+}
+
+.finance-mode .table-card,
+.finance-mode .catalog-group,
+.finance-mode .screen-info {
+  box-shadow: inset 0 1px 0 #ffffff, 0 3px 0 #b8ccd9, 0 7px 13px #3b5c7414;
+}
+
+.finance-mode .table-wrap {
+  box-shadow: inset 0 1px 3px #5778911c, 0 1px 0 #ffffff;
+}
+
+.finance-mode .primary-btn,
+.finance-mode .ghost-btn,
+.finance-mode .voucher-secondary,
+.finance-room-controls button,
+.finance-room-links button {
+  transition: transform 140ms ease, filter 140ms ease, box-shadow 140ms ease;
+}
+
+.finance-mode .primary-btn:not(:disabled):hover,
+.finance-mode .ghost-btn:not(:disabled):hover,
+.finance-mode .voucher-secondary:not(:disabled):hover,
+.finance-room-controls button:not(:disabled):hover,
+.finance-room-links button:not(:disabled):hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.finance-mode .primary-btn:not(:disabled):active,
+.finance-mode .ghost-btn:not(:disabled):active,
+.finance-mode .voucher-secondary:not(:disabled):active,
+.finance-tab-bar button:not(:disabled):active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 4px #1d3f5b38;
+}
+
+.finance-mode button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+  transform: none;
+}
+
+.finance-mode button:focus-visible,
+.finance-mode input:focus-visible,
+.finance-mode select:focus-visible {
+  outline: 3px solid #f3bd3f;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .finance-mode button {
+    transition: none;
+  }
+
+  .finance-mode button:hover,
+  .finance-mode button:active {
+    transform: none;
+  }
+}
+
+/* Keep the assistant launcher in the header so it never blocks a table action. */
+.finance-chat-toggle {
+  position: static;
+  box-shadow: 0 3px 0 #b68a3c, 0 5px 10px #1c35462b;
+}
+
+.voucher-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+.voucher-pagination span {
+  color: #456381;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.voucher-filters label {
+  min-width: 135px;
+}

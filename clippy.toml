@@ -1,0 +1,6 @@
+# أنواع ممنوعة على مستوى المشروع: المال لا يُمثَّل بعدد عائم.
+disallowed-types = ["f32", "f64"]
+# ملاحظة: قاعدة منع std::process::exit جُرِّبت وأُسقطت — مسار التهيئة (--init-admin)
+# يخرج قبل تشغيل الخادم فلا معنى لتمرير خطأ عبر Result هناك.
+too-many-arguments-threshold = 8
+type-complexity-threshold = 250

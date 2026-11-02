@@ -1,0 +1,31 @@
+# سياسة التبعيات: ثغرات + تراخيص + مصادر + تكرار.
+[graph]
+targets = [{ triple = "x86_64-unknown-linux-gnu" }]
+
+[advisories]
+version = 2
+yanked = "deny"
+ignore = []
+
+[licenses]
+version = 2
+allow = ["MIT", "Apache-2.0", "Apache-2.0 WITH LLVM-exception",
+         "BSD-3-Clause", "ISC", "Unicode-3.0", "Zlib"]
+confidence-threshold = 0.9
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+deny = [
+  { name = "openssl", reason = "استخدم rustls بدلًا من OpenSSL" },
+]
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+
+# المشروع نفسه (private = true) ليس ضمن نطاق فحص التراخيص.
+[[licenses.exceptions]]
+name = "smart-accountant"
+allow = ["LicenseRef-Proprietary"]

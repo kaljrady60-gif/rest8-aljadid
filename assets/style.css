@@ -1,0 +1,13 @@
+/* Ordered cascade: each file contains the original rules in their previous sequence. */
+@import url("styles/01-shell-and-layout.css");
+@import url("styles/02-shortcuts-and-assistant.css");
+@import url("styles/03-assistant-and-tables.css");
+@import url("styles/04-dialogs-and-responsive.css");
+@import url("styles/05-theme-and-catalog.css");
+@import url("styles/06-accounts-and-controls.css");
+@import url("styles/07-resizing-and-views.css");
+@import url("styles/08-auth-vouchers-finance.css");
+@import url("styles/09-finance-workbench.css");
+@import url("styles/10-finance-depth.css");
+@import url("styles/11-finance-registry.css");
+@import url("styles/12-readable-typography.css");

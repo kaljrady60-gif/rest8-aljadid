@@ -1,0 +1,31 @@
+<section id="view-vouchers" class="detail-view hidden" aria-labelledby="voucher-page-title">
+<div class="voucher-banner">
+<div><span class="detail-kicker">المالية / السندات</span><h2 id="voucher-page-title">سندات القبض والصرف</h2><p>مسودات مرتبطة بقيود متوازنة، جاهزة للمراجعة.</p>
+<div class="voucher-banner-actions"><button type="button" class="primary-btn" id="voucher-receipt" data-help="إنشاء مسودة سند قبض وقيدها دون ترحيل.">＋ سند قبض</button><button type="button" class="voucher-secondary" id="voucher-payment" data-help="إنشاء مسودة سند صرف وقيدها دون ترحيل.">＋ سند صرف</button></div></div>
+<div class="voucher-art" aria-hidden="true">
+<div class="voucher-art-sheet"><span>▤</span><i></i><i></i><i></i><b>✓</b></div>
+<div class="voucher-art-coin">﷼</div></div></div>
+<div class="voucher-notice">المسودات لا تُرحّل ولا تغيّر الأرصدة. نموذج السند العادي أدناه يستخدم طرفًا وصفيًا وحسابًا من الدليل؛ لوحة السجل التجريبي توفر نموذجًا آخر مرتبطًا بطرف وصندوق أو بنك.</div>
+{% include "components/finance-registry.html" %}
+<div class="table-card voucher-table-card">
+<div class="table-head">
+<div><h3>سجل السندات</h3><p>الأحدث أولًا • بحث وتصفية عبر السجل، مع ١٠٠ سند كحد أقصى في الصفحة</p></div><span id="voucher-count" class="voucher-count">—</span></div>
+<div class="voucher-filters">
+<label>بحث في السندات<input id="voucher-search" type="search" maxlength="120" placeholder="رقم، طرف، بيان، مرجع أو حساب..." data-help="بحث في كامل سجل السندات من الخادم؛ البحث في الأحرف الإنجليزية غير حساس لحالتها."></label>
+<label>نوع السند<select id="voucher-filter" data-help="تصفية السجل حسب نوع السند."><option value="">كل الأنواع</option><option value="receipt">سند قبض</option><option value="payment">سند صرف</option></select></label>
+<label>العملة<select id="voucher-currency" data-help="تصفية السجل بعملة السند."><option value="">كل العملات</option>{% include "components/currency-options.html" %}</select></label>
+<label>من تاريخ<input id="voucher-from" type="date" data-help="عرض السندات من هذا التاريخ شاملًا."></label>
+<label>إلى تاريخ<input id="voucher-to" type="date" data-help="عرض السندات حتى هذا التاريخ شاملًا."></label>
+<button type="button" class="ghost-btn" id="voucher-refresh" data-help="تحديث السجل من أحدث سند مع المرشحات الحالية.">↻ تحديث</button>
+</div>
+<div id="voucher-list-error" class="form-message hidden" role="alert"></div>
+<div class="table-wrap voucher-table-wrap">
+<table>
+<thead>
+<tr><th>السند</th><th>التاريخ</th><th>الطرف</th><th>الحساب النقدي</th><th>المبلغ</th><th>الحالة</th><th>القيد المرتبط</th></tr></thead>
+<tbody id="voucher-list"></tbody></table></div><p id="voucher-empty" class="empty">لا توجد سندات محمّلة.</p><p id="voucher-more" class="draft-limit-note hidden">توجد سندات أقدم مطابقة. استخدم «الأقدم» لعرضها.</p>
+<div class="voucher-pagination" aria-label="صفحات السندات">
+<button type="button" class="ghost-btn" id="voucher-newer" disabled data-help="العودة إلى الصفحة الأحدث ضمن نفس النتائج.">الأحدث</button>
+<span id="voucher-page" aria-live="polite">صفحة ١</span>
+<button type="button" class="ghost-btn" id="voucher-older" disabled data-help="عرض الصفحة التالية من السندات الأقدم المطابقة.">الأقدم</button>
+</div></div></section>

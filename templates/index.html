@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+{% include "components/head.html" %}
+<body>
+{% include "components/login.html" %}
+{% include "components/icons.html" %}
+<div class="app-shell" inert>
+{% include "components/topbar.html" %}
+<main class="layout"><section class="workspace">
+{% include "components/workspace-intro.html" %}
+{% include "components/home.html" %}
+<section id="view-detail" class="detail-view hidden"></section>
+{% include "components/accounts.html" %}
+{% include "components/journals.html" %}
+{% include "components/ledger.html" %}
+{% include "components/periods.html" %}
+{% include "components/vouchers.html" %}
+{% include "components/split-view.html" %}
+</section>
+{% include "components/assistant.html" %}
+{% include "components/footer.html" %}
+{% include "components/voucher-dialog.html" %}
+{% include "components/draft-dialog.html" %}
+{% include "components/rename-dialog.html" %}
+{% include "components/account-dialog.html" %}
+{% include "components/draft-details-dialog.html" %}
+{% include "components/shortcut-dialog.html" %}
+{% include "components/notifications.html" %}
+</body></html>

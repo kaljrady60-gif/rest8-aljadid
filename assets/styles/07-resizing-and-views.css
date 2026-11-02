@@ -1,0 +1,368 @@
+.assistant-controls {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.assistant-controls .more {
+  margin: 0;
+  padding: 5px 3px;
+}
+
+.assistant-control {
+  border: 1px solid #c5d5e2;
+  background: #edf4f8;
+  border-radius: 6px;
+  color: #426782;
+  width: 26px;
+  height: 26px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.assistant-control:focus-visible,.resize-handle:focus-visible {
+  outline: 3px solid #448ce4;
+  outline-offset: 2px;
+}
+
+.resize-handle {
+  touch-action: none;
+  user-select: none;
+  border: 0;
+  z-index: 3;
+  padding: 0;
+}
+
+.assistant-resize-width {
+  position: absolute;
+  left: 0;
+  top: 45px;
+  bottom: 18px;
+  width: 9px;
+  background: transparent;
+  cursor: ew-resize;
+}
+
+.assistant-resize-width:hover,.assistant-resize-width:focus-visible {
+  background: #8cb9d8;
+}
+
+.assistant-resize-height {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 9px;
+  background: transparent;
+  cursor: ns-resize;
+}
+
+.assistant-resize-height:after {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 3px;
+  margin: auto;
+  border-radius: 4px;
+  background: #a9c2d5;
+}
+
+.assistant-panel.chat-minimized {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+.chat-minimized .assistant-status,.chat-minimized .chat-area,.chat-minimized .chat-input,.chat-minimized .chat-disclaimer,.chat-minimized .resize-handle {
+  display: none;
+}
+
+.chat-minimized .assistant-head {
+  padding: 10px 12px;
+}
+
+.assistant-panel.chat-maximized {
+  position: fixed;
+  z-index: 500;
+  inset: 12px;
+  width: auto !important;
+  height: auto !important;
+  max-width: none;
+  min-height: 0;
+  box-shadow: 0 8px 60px #142c4e70;
+}
+
+.chat-maximized .resize-handle {
+  display: none;
+}
+
+.resizable-table {
+  table-layout: fixed;
+  max-width: none;
+}
+
+.resizable-table th {
+  position: relative;
+  overflow-wrap: anywhere;
+}
+
+.resizable-table td {
+  overflow-wrap: anywhere;
+}
+
+.column-resize {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -4px;
+  width: 10px;
+  background: transparent;
+  cursor: col-resize;
+}
+
+.column-resize:hover,.column-resize:focus-visible {
+  background: #77b5dd88;
+}
+
+.field-resize-wrap {
+  position: relative;
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.field-resize-wrap input,.field-resize-wrap select {
+  width: 100%;
+  max-width: 100%;
+}
+
+.field-resize {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  background: linear-gradient(135deg,transparent 48%,#86a6be 51%,#86a6be 58%,transparent 61%,transparent 68%,#86a6be 71%,#86a6be 78%,transparent 81%);
+  cursor: nwse-resize;
+}
+
+.field-resize:hover,.field-resize:focus-visible {
+  background-color: #c8dfef;
+}
+
+@media(max-width:850px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .assistant-resize-width {
+    display: none;
+  }
+  .assistant-panel {
+    width: 100%;
+  }
+}
+
+.assistant-panel.chat-maximized {
+  height: calc(100dvh - 24px) !important;
+}
+
+.table-resize-frame {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.table-frame-width {
+  position: absolute;
+  left: -4px;
+  top: 8px;
+  bottom: 8px;
+  width: 9px;
+  background: transparent;
+  cursor: ew-resize;
+}
+
+.table-frame-height {
+  position: absolute;
+  bottom: -5px;
+  left: 20%;
+  right: 20%;
+  height: 10px;
+  background: transparent;
+  cursor: ns-resize;
+}
+
+.table-frame-height:after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #9ab8ce;
+  border-radius: 3px;
+  margin: auto;
+}
+
+.table-frame-width:hover,.table-frame-width:focus-visible,.table-frame-height:hover,.table-frame-height:focus-visible {
+  background: #8cb9d899;
+}
+
+.table-scroll-hint {
+  font-size: 12px;
+  color: #526f88;
+  padding: 0 4px 8px;
+}
+
+.table-scroll-hint[hidden] {
+  display: none;
+}
+
+.line-row select {
+  margin-top: 7px;
+}
+
+.draft-account-notice {
+  font-size: 13px;
+  color: #805c28;
+  background: #f6f0df;
+  border: 1px solid #e4d5b4;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+.draft-account-ref {
+  display: block;
+  font-size: 12px;
+  color: #7a8ea0;
+  margin-top: 3px;
+}
+
+.ledger-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+}
+
+.ledger-toolbar label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 130px;
+  color: #405e7b;
+  font-size: .82rem;
+}
+
+.ledger-toolbar input,.ledger-toolbar select {
+  min-height: 38px;
+  border: 1px solid #b8cad9;
+  background: #f4f7fa;
+  color: #253f59;
+  border-radius: 7px;
+  padding: 6px 9px;
+}
+
+.ledger-toolbar .hidden {
+  display: none;
+}
+
+.ledger-summary {
+  padding: 12px 2px;
+  color: #385c78;
+  font-weight: 600;
+}
+
+.ledger-toolbar button {
+  min-height: 38px;
+}
+
+#view-ledger table {
+  min-width: 850px;
+}
+
+#view-ledger th,#view-ledger td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.period-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+}
+
+.period-form label {
+  flex: 1 1 145px;
+}
+
+.period-form button {
+  min-height: 38px;
+}
+
+.period-list {
+  margin-top: 14px;
+}
+
+#view-periods table {
+  min-width: 950px;
+}
+
+#view-periods th,#view-periods td {
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+
+.period-history {
+  margin-top: 15px;
+  background: #eaf1f7;
+  border: 1px solid #c2d4e2;
+  border-radius: 9px;
+  padding: 12px;
+  color: #395b76;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.period-history h3 {
+  font-size: 13px;
+}
+
+.period-history ul {
+  margin: 6px 0;
+  padding-right: 20px;
+}
+
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: #e8eff6;
+  padding: 20px;
+}
+
+.login-overlay.hidden {
+  display: none;
+}
+
+.login-card {
+  width: min(420px,100%);
+  background: #fff;
+  border: 1px solid #d3e0ed;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 16px 45px #27486b20;
+  display: grid;
+  gap: 12px;
+}
+
+.login-card h1 {
+  margin: 0;
+}

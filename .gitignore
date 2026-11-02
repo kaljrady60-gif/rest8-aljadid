@@ -1,0 +1,9 @@
+*.sqlite
+*.sqlite-journal
+.bridge-logs/
+.env
+/data/*.sqlite*
+/target/
+bin/
+data/
+target/

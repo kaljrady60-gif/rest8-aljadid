@@ -1,0 +1,13 @@
+/* Secondary text remains distinguishable from decorative strokes. */
+.top-note,.workspace-head p,.head-date,.shortcut-title small,.content-heading p,
+.overview p,.card-body p,.metric small,.metric span,.assistant-head p,
+.detail-card p,.lines-heading p,.line-head {
+  color: #526b82;
+}
+input::placeholder,textarea::placeholder {
+  color: #63798c;
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  input,select,textarea { font-size: 16px; }
+}

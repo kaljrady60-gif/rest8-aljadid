@@ -1,0 +1,13 @@
+.registry-panel { margin: 18px 0; padding: 18px; border: 1px solid #cbd8e6; border-radius: 16px; background: linear-gradient(145deg,#f8fbff,#e9f1f8); box-shadow: 0 8px 18px #243f5d1b, inset 0 1px white; }
+.registry-panel summary { cursor: pointer; font-weight: 800; color: #173e62; }
+.registry-panel p { line-height: 1.8; }
+.registry-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin: 16px 0; }
+.registry-card { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; align-content: start; padding: 16px; border: 1px solid #d2deea; border-radius: 14px; background: #fff; box-shadow: 0 5px 12px #193a5817; }
+.registry-card h3,.registry-card small { grid-column: 1 / -1; margin: 0; }
+.registry-card label { display: grid; gap: 5px; font-size: .9rem; font-weight: 700; min-width: 0; }
+.registry-card input,.registry-card select { width: 100%; min-width: 0; border: 1px solid #b7cada; border-radius: 8px; background: #f9fcff; padding: 9px; color: #143452; }
+.registry-card [hidden] { display: none; }
+#registry-overview { display: flex; flex-wrap: wrap; gap: 8px; }
+#registry-overview span { border: 1px solid #cbdaea; border-radius: 8px; background: #fff; padding: 8px; }
+@media (max-width: 760px) { .registry-grid { grid-template-columns: 1fr; } }
+@media (max-width: 430px) { .registry-card { grid-template-columns: 1fr; } }

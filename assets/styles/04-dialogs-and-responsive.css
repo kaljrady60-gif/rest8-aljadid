@@ -1,0 +1,295 @@
+.detail-card {
+  background: #fff;
+  border: 1px solid #e6edf6;
+  border-radius: 13px;
+  padding: 17px;
+  min-height: 110px;
+}
+
+.detail-card h3 {
+  font-size: 13px;
+}
+
+.detail-card p {
+  font-size: 12px;
+  color: #9aaabc;
+  line-height: 1.8;
+  margin: 8px 0;
+}
+
+.state-label {
+  font-size: 12px;
+  color: #a29171;
+  background: #faf7ef;
+  border-radius: 5px;
+  padding: 4px 6px;
+}
+
+.state-label.ready {
+  color: #32947b;
+  background: #e9faf4;
+}
+
+.detail-card button {
+  margin-top: 9px;
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.split-pane {
+  background: #fff;
+  border: 1px solid #e5edf6;
+  border-radius: 13px;
+  padding: 14px;
+  min-height: 240px;
+}
+
+.split-pane select {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.split-pane .detail-card {
+  min-height: 0;
+  margin-bottom: 8px;
+  background: #f9fbfe;
+}
+
+.split-pane .detail-card p {
+  margin-bottom: 0;
+}
+
+dialog {
+  border: 1px solid #e3ebf5;
+  border-radius: 17px;
+  width: min(760px,calc(100vw - 28px));
+  max-height: 90vh;
+  box-shadow: 0 20px 80px #142c4e45;
+  padding: 21px;
+  color: #1e3047;
+}
+
+dialog::backdrop {
+  background: #15273d70;
+  backdrop-filter: blur(3px);
+}
+
+.dialog-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #eef2f7;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.dialog-head h2 {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.dialog-head p {
+  color: #94a4b7;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #526a83;
+}
+
+label span {
+  color: #e06e65;
+}
+
+input,select {
+  display: block;
+  width: 100%;
+  border: 1px solid #e0e9f3;
+  border-radius: 9px;
+  background: #fff;
+  color: #354b66;
+  padding: 10px;
+  margin-top: 7px;
+  font-size: 13px;
+  min-width: 0;
+}
+
+.lines-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 12px;
+}
+
+.lines-heading h3 {
+  font-size: 13px;
+}
+
+.lines-heading p {
+  color: #9aabbd;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.line-head,.line-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 32px;
+  gap: 8px;
+  align-items: center;
+}
+
+.line-head {
+  font-size: 12px;
+  color: #98a7b7;
+  padding: 0 3px;
+}
+
+.line-row input {
+  margin-top: 7px;
+}
+
+.remove-line {
+  border: 0;
+  background: #fff1f0;
+  color: #d97e77;
+  border-radius: 7px;
+  height: 32px;
+  margin-top: 7px;
+}
+
+.form-note {
+  font-size: 12px;
+  background: #f4f8fd;
+  color: #8498af;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 16px;
+}
+
+.form-message {
+  font-size: 13px;
+  background: #fff2f0;
+  color: #b8564a;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 9px;
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.shortcut-options {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+.shortcut-options label {
+  background: #f8fbff;
+  border: 1px solid #e7eff8;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shortcut-options input {
+  width: auto;
+  margin: 0;
+}
+
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background: #203e62;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 15px;
+  z-index: 30;
+  font-size: 13px;
+  box-shadow: 0 8px 30px #152a4d35;
+}
+
+.tooltip {
+  position: fixed;
+  max-width: 270px;
+  background: #263c57;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.7;
+  z-index: 1000;
+  box-shadow: 0 4px 15px #152a4d35;
+  pointer-events: auto;
+}
+
+.short-empty {
+  font-size: 12px;
+  color: #a7b5c5;
+}
+
+@media(max-width:1200px) {
+  .cards {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+  .layout {
+    grid-template-columns: minmax(0,1fr) 290px;
+  }
+  .metric {
+    padding: 2px 8px;
+  }
+}
+
+@media(max-width:850px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .assistant-panel {
+    min-height: 430px;
+  }
+  .cards {
+    grid-template-columns: repeat(3,1fr);
+  }
+  .chat-area {
+    min-height: 180px;
+  }
+  .top-note {
+    display: none;
+  }
+  .shortcut-bar {
+    flex-wrap: wrap;
+  }
+  .add-shortcut {
+    margin-right: 0;
+  }
+  .metrics {
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px;
+  }
+  .metric:nth-child(2) {
+    border-left: 0;
+  }
+  .metric:nth-child(3) {
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,5 @@
+# إصدار Rust مثبّت للمشروع كله (rustup يلتزم به تلقائيًا).
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy", "llvm-tools-preview"]
+profile = "minimal"

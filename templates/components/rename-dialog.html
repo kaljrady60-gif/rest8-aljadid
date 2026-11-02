@@ -1,0 +1,6 @@
+<dialog id="rename-dialog" aria-labelledby="rename-title">
+<div class="dialog-head">
+<div><span class="detail-kicker">المالية / دليل الحسابات</span><h2 id="rename-title">تعديل اسم الحساب</h2><p>تعديل الاسم فقط؛ لا يمكن تغيير التصنيف أو النوع أو العملة أو الأب هنا.</p></div><button type="button" class="icon-btn" id="close-rename" aria-label="إغلاق"><svg><use href="#i-close"/></svg></button></div>
+<form id="rename-form"><label>اسم الحساب <span>*</span><input name="name" required maxlength="100" data-help="الاسم الجديد للحساب. يتحقق الخادم من عدم تغير الاسم منذ فتح النافذة."></label>
+<div id="rename-error" class="form-message hidden" role="alert"></div>
+<div class="dialog-actions"><button type="button" class="ghost-btn" id="cancel-rename">إلغاء</button><button type="submit" class="primary-btn">حفظ الاسم</button></div></form></dialog>

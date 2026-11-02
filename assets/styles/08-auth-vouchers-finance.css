@@ -1,0 +1,366 @@
+.login-card p {
+  color: #586c83;
+  line-height: 1.8;
+}
+
+.login-card label {
+  font-weight: 700;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b9ccdd;
+  border-radius: 8px;
+  background: #f9fbfd;
+}
+
+.login-error {
+  color: #a52b2b;
+  min-height: 1.2em;
+}
+
+.login-card button {
+  padding: 12px;
+}
+
+/* Financial vouchers: layered reference-inspired surfaces, without invented totals. */
+
+.voucher-banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 172px;
+  padding: 24px 26px;
+  border: 1px solid #d8eafa;
+  border-radius: 17px;
+  background: radial-gradient(circle at 15% 20%,#fff 0,#e8f5ff 32%,#f3f9ff 75%);
+  box-shadow: inset 0 1px 0 #fff,0 9px 23px #3981c211;
+  overflow: hidden;
+}
+
+.voucher-banner h2 {
+  font-size: 20px;
+  margin: 9px 0;
+  color: #24476e;
+}
+
+.voucher-banner p {
+  font-size: 13px;
+  color: #718da9;
+}
+
+.voucher-banner-actions {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 19px;
+}
+
+.voucher-secondary {
+  border: 1px solid #cde2f7;
+  background: linear-gradient(#fff,#f2f8fe);
+  color: #3979ba;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 4px 9px #448ee615;
+}
+
+.voucher-secondary:hover,.voucher-banner .primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px #448ee630;
+}
+
+.voucher-art {
+  position: relative;
+  width: 150px;
+  height: 135px;
+  flex-shrink: 0;
+}
+
+.voucher-art-sheet {
+  position: absolute;
+  top: 8px;
+  left: 25px;
+  width: 88px;
+  height: 110px;
+  border: 1px solid #c6e0fa;
+  border-radius: 10px;
+  background: linear-gradient(145deg,#fff,#e7f4ff);
+  box-shadow: 0 12px 18px #457da534,3px 5px 0 #bedaf1;
+  transform: rotate(8deg);
+  padding: 12px;
+}
+
+.voucher-art-sheet span {
+  display: block;
+  color: #438ee3;
+  font-size: 25px;
+}
+
+.voucher-art-sheet i {
+  display: block;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 4px;
+  background: #c6def5;
+}
+
+.voucher-art-sheet i:nth-child(3) {
+  width: 70%;
+}
+
+.voucher-art-sheet b {
+  position: absolute;
+  left: -13px;
+  bottom: -10px;
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: linear-gradient(145deg,#72d2ba,#38ac94);
+  color: white;
+  box-shadow: 0 5px 8px #308f8460;
+}
+
+.voucher-art-coin {
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(145deg,#ffe6a4,#efb95b);
+  border: 4px solid #f8d589;
+  box-shadow: 0 6px 0 #dca657,0 10px 12px #9e794f40;
+  color: #aa752b;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.voucher-notice {
+  padding: 12px 15px;
+  margin: 12px 0;
+  background: #f4f9fd;
+  border: 1px solid #e2edf7;
+  color: #597591;
+  border-radius: 11px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.voucher-table-card {
+  margin-top: 14px;
+}
+
+.voucher-count {
+  color: #4c80b5;
+  background: #eef7ff;
+  padding: 6px 10px;
+  border-radius: 9px;
+  font-size: 12px;
+}
+
+.voucher-filters {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  flex-wrap: wrap;
+  margin: 4px 0 15px;
+}
+
+.voucher-filters label:first-child {
+  flex: 1;
+  min-width: 180px;
+}
+
+.voucher-filters label:nth-child(2) {
+  width: 150px;
+}
+
+.voucher-filters button {
+  min-height: 36px;
+}
+
+.voucher-table-wrap table {
+  min-width: 760px;
+}
+
+.voucher-table-wrap td {
+  vertical-align: middle;
+}
+
+.voucher-sub {
+  display: block;
+  font-size: 12px;
+  color: #91a5b7;
+  margin-top: 6px;
+  max-width: 200px;
+  overflow-wrap: anywhere;
+}
+
+.voucher-type {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 6px 9px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.voucher-type.receipt {
+  background: #e9f8f4;
+  color: #2f9a7f;
+}
+
+.voucher-type.payment {
+  background: #fff4e9;
+  color: #bb7b37;
+}
+
+.voucher-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.voucher-wide {
+  grid-column: 1/-1;
+}
+
+.voucher-form-grid input,.voucher-form-grid select {
+  min-height: 39px;
+}
+
+@media(max-width:600px) {
+  .voucher-banner {
+    padding: 18px;
+  }
+  .voucher-art {
+    transform: scale(.75);
+    transform-origin: left center;
+    width: 95px;
+  }
+  .voucher-banner h2 {
+    font-size: 17px;
+  }
+  .voucher-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .voucher-wide {
+    grid-column: auto;
+  }
+  .voucher-filters label:first-child {
+    min-width: 100%;
+  }
+  .voucher-filters label:nth-child(2) {
+    flex: 1;
+  }
+}
+
+@media(max-width:600px) {
+  #voucher-form .dialog-actions {
+    position: sticky;
+    bottom: -21px;
+    background: var(--surface,#fff);
+    padding: 12px 0 16px;
+    box-shadow: 0 -8px 14px #eaf1f6dd;
+    z-index: 1;
+  }
+}
+
+/* Independently built finance workbench, based on visual observations of the reference. */
+
+body.finance-mode {
+  background: linear-gradient(155deg,#667f98 0%,#4c6784 48%,#415b79 100%);
+  min-height: 100vh;
+}
+
+.finance-mode .app-shell {
+  max-width: none;
+}
+
+.finance-mode .topbar {
+  border-radius: 20px;
+  background: #f8fafc;
+  box-shadow: 0 5px 0 #acbecc,0 13px 30px #243d5830;
+}
+
+.finance-mode .layout {
+  display: block;
+}
+
+.finance-mode .workspace {
+  width: 100%;
+  min-width: 0;
+}
+
+.finance-mode .workspace-head,.finance-mode .shortcut-bar,.finance-mode .content-heading {
+  display: none;
+}
+
+.finance-mode .notice {
+  margin: 14px 0 9px;
+  background: #fff8df;
+  border-color: #e2cd8b;
+  color: #72551e;
+}
+
+.finance-mode .assistant-panel {
+  display: none;
+}
+
+.finance-mode.finance-chat-open .assistant-panel {
+  display: flex;
+  position: fixed;
+  z-index: 60;
+  left: 20px;
+  bottom: 66px;
+  width: min(360px,calc(100vw - 40px));
+  min-height: 0;
+  height: min(600px,calc(100vh - 110px));
+  box-shadow: 0 12px 40px #11284070;
+}
+
+.finance-mode .footer {
+  color: #d8e6f3;
+}
+
+.finance-workbench {
+  width: 100%;
+}
+
+.finance-crumb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #d5e6f4;
+  font-size: 13px;
+  margin: 13px 3px;
+}
+
+.finance-crumb button,.finance-crumb b {
+  border: 1px solid #b8cbdb;
+  border-radius: 10px;
+  padding: 8px 13px;
+  font: inherit;
+  font-weight: 800;
+}
+
+.finance-crumb button {
+  color: #42627b;
+  background: #dfeaf2;
+}
+
+.finance-crumb b {
+  color: white;
+  background: linear-gradient(#1874df,#0757ac);
+  border-color: #0754a5;
+  box-shadow: 0 3px 0 #074b91;
+}

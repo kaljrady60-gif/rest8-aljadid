@@ -1,0 +1,12 @@
+<section id="view-ledger" class="detail-view hidden">
+<div class="detail-banner">
+<div><span class="detail-kicker">المالية / الأستاذ والميزان</span><h2 id="ledger-title">حركات الأستاذ التجريبية</h2><p>تُحسب من القيود المرحّلة تجريبيًا فقط، بعملة واحدة لكل عرض.</p></div><button type="button" class="ghost-btn" data-open="journals">العودة للقيود</button></div>
+
+<div class="table-card">
+<div class="draft-toolbar ledger-toolbar"><label>التقرير<select id="ledger-mode" data-help="اختر حركات الأستاذ أو ميزان الأرصدة منذ أول قيد وحتى التاريخ المحدد."><option value="entries">حركات الأستاذ</option><option value="trial">ميزان المراجعة</option></select></label><label>العملة<select id="ledger-currency" data-help="لا تُجمع عملات مختلفة معًا.">{% include "components/currency-options.html" %}</select></label><label id="ledger-account-label">الحساب<select id="ledger-account" data-help="عرض حركات حساب واحد أو جميع الحسابات."><option value="">كل الحسابات</option></select></label><label id="ledger-from-label">من تاريخ<input type="date" id="ledger-from" data-help="بداية عرض الحركات؛ عند اختيار حساب يُحتسب الرصيد السابق من القيود المرحّلة دون رصيد افتتاحي مستقل."></label><label>حتى تاريخ<input type="date" id="ledger-to" data-help="يشمل التقرير العمليات حتى نهاية هذا التاريخ."></label><button type="button" class="primary-btn" id="ledger-load">عرض التقرير</button></div>
+<div id="ledger-error" class="form-message hidden" role="alert"></div>
+<div id="ledger-summary" role="status" class="ledger-summary"></div>
+<div class="table-wrap">
+<table>
+<thead id="ledger-head"></thead>
+<tbody id="ledger-body"></tbody></table></div><p class="draft-limit-note" id="ledger-note">هذه ليست قوائم مالية معتمدة؛ لا يشمل العرض إقفالًا أو تحويل عملات.</p></div></section>

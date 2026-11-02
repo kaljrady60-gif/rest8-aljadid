@@ -1,0 +1,13 @@
+<dialog id="draft-dialog">
+<div class="dialog-head">
+<div><span class="detail-kicker">المالية / القيود</span><h2>مسودة قيد يومية</h2><p>أدخل القيم بصورة عشرية، ثم راجع القيد قبل حفظه.</p></div><button class="icon-btn" id="close-draft" aria-label="إغلاق"><svg><use href="#i-close"/></svg></button></div>
+<form id="draft-form">
+<div class="form-grid"><label>بيان القيد <span>*</span><input name="description" required maxlength="200" placeholder="مثال: إثبات عملية بيع" data-help="وصف مختصر للعملية، حتى ٢٠٠ حرف."></label><label>تاريخ القيد <span>*</span><input name="date" type="date" required data-help="تاريخ المستند في هذه المسودة."></label><label>العملة <span>*</span><select name="currency" data-help="عملة المسودة. تعدد العملات في القيد غير متاح بعد.">{% include "components/currency-options.html" %}</select></label></div>
+<div class="lines-heading">
+<div><h3>أطراف القيد</h3><p>كل سطر مدين أو دائن، ويجب توازن الإجمالي.</p></div><button type="button" class="ghost-btn" id="add-line">＋ إضافة سطر</button></div>
+<div class="line-head"><span>الحساب</span><span>مدين</span><span>دائن</span><span></span></div>
+<div id="line-items"></div>
+<div id="draft-account-notice" class="draft-account-notice hidden" role="status"></div>
+<div class="form-note">المسودة لا تُرحّل ولا تنشئ أرصدة. الحسابات التفصيلية من الدليل فقط وبعملة المسودة نفسها مؤقتًا؛ الدقة حتى ٤ منازل عشرية، ولا تشمل ضرائب أو صرفًا.</div>
+<div id="form-message" class="form-message hidden" role="alert"></div>
+<div class="dialog-actions"><button type="button" class="ghost-btn" id="cancel-draft">إلغاء</button><button type="submit" class="primary-btn">التحقق وحفظ المسودة</button></div></form></dialog>

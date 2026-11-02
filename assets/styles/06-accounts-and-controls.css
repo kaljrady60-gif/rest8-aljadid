@@ -1,0 +1,368 @@
+.split-pane {
+  max-height: 610px;
+  overflow: auto;
+}
+
+.split-pane .catalog-card {
+  min-height: 120px;
+}
+
+.shortcut-options {
+  max-height: 55vh;
+  overflow: auto;
+}
+
+@media(max-width:550px) {
+  .catalog-tools {
+    flex-wrap: wrap;
+  }
+  .catalog-tools input {
+    max-width: none;
+  }
+  .catalog-group .detail-cards {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 7px;
+  }
+  .catalog-card {
+    padding: 10px;
+  }
+  .catalog-card-bottom {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+}
+
+.art-emoji svg {
+  width: 58px;
+  height: 58px;
+  stroke: #426a91;
+  stroke-width: 1.4;
+  fill: none;
+  filter: drop-shadow(0 5px 4px rgba(40,75,105,.16));
+}
+
+.screen-icon,.screen-info-icon {
+  color: #7399b9;
+}
+
+.screen-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.screen-info-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.catalog-related {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 12px 12px;
+  color: #607990;
+  font-size: 12px;
+}
+
+.catalog-related button {
+  border: 1px solid #bdd0df;
+  background: #f1f6fa;
+  color: #397bb5;
+  border-radius: 7px;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
+.draft-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px 12px;
+  flex-wrap: wrap;
+  color: #526f88;
+  font-size: 13px;
+}
+
+.draft-toolbar input {
+  max-width: 350px;
+  margin: 0;
+}
+
+.draft-toolbar span {
+  color: #627b92;
+  margin-inline-start: auto;
+}
+
+.draft-limit-note {
+  padding: 10px 15px;
+  color: #637b91;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.draft-view-btn {
+  border: 1px solid #b6ccdd;
+  border-radius: 7px;
+  padding: 5px 10px;
+  color: #397bb5;
+  background: #edf5fa;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.detail-meta {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 8px;
+  margin: 5px 0 15px;
+}
+
+.detail-meta div {
+  border: 1px solid #cbd9e5;
+  background: #eef4f8;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-meta small {
+  color: #697f93;
+}
+
+.detail-meta b {
+  color: #2e4c66;
+}
+
+.detail-description {
+  line-height: 1.8;
+  margin: 8px 0 15px;
+}
+
+.draft-detail-error {
+  border: 1px solid #d49d9d;
+  background: #faeded;
+  color: #8b3030;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.table-card .empty {
+  padding: 18px;
+}
+
+@media(max-width:550px) {
+  .detail-meta {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .draft-toolbar input {
+    max-width: none;
+  }
+}
+
+.account-notice {
+  padding: 10px 14px;
+  margin: 12px 0;
+  color: #795f36;
+  background: #f5f0df;
+  border: 1px solid #decfaa;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.account-workspace {
+  display: grid;
+  grid-template-columns: minmax(0,1.4fr) minmax(230px,.8fr);
+  gap: 13px;
+  align-items: start;
+}
+
+.account-tree-panel,.account-inspector {
+  border: 1px solid var(--edge);
+  border-radius: 13px;
+  background: var(--surface);
+  padding: 16px;
+  min-height: 260px;
+}
+
+.account-head h3,.account-inspector h3 {
+  font-size: 14px;
+  color: #34516e;
+}
+
+.account-head p,.account-inspector>p,.account-muted {
+  font-size: 13px;
+  color: #627c94;
+  margin: 8px 0;
+}
+
+.account-search-label {
+  display: block;
+  font-size: 13px;
+  color: #52718c;
+  margin-top: 12px;
+}
+
+.account-tree-panel input {
+  margin: 7px 0 12px;
+}
+
+.account-node {
+  margin: 5px 0;
+}
+
+.account-tree-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: right;
+  background: #eef4f8;
+  border: 1px solid #c8d8e5;
+  border-radius: 8px;
+  padding: 10px;
+  color: #314d66;
+}
+
+.account-tree-row.selected {
+  border-color: #6e9fc8;
+  background: #dcecf7;
+}
+
+.account-tree-row strong {
+  flex: 1;
+  font-size: 14px;
+}
+
+.account-tree-code {
+  font-size: 13px;
+  color: #537794;
+}
+
+.account-kind {
+  color: #67859a;
+  font-size: 12px;
+}
+
+.account-branches {
+  margin-right: 20px;
+}
+
+.account-branches summary {
+  cursor: pointer;
+  color: #668299;
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+.account-children {
+  border-right: 1px solid #b7cad8;
+  padding-right: 12px;
+}
+
+.account-empty {
+  padding: 24px 8px;
+  text-align: center;
+  color: #6b8295;
+  font-size: 13px;
+}
+
+.account-tree-error {
+  color: #993d3d;
+  background: #faeded;
+  border: 1px solid #dfbbbb;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.account-selected {
+  border-bottom: 1px solid #ccdae5;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.account-properties div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #dae4ec;
+  font-size: 13px;
+}
+
+.account-properties dt {
+  color: #6c8296;
+}
+
+.account-properties dd {
+  color: #35536e;
+  font-weight: 700;
+}
+
+.account-inspector .account-muted {
+  line-height: 1.8;
+}
+
+.account-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 12px;
+}
+
+.account-form-grid label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #526c84;
+}
+
+.account-form-grid input,.account-form-grid select {
+  display: block;
+  margin-top: 6px;
+}
+
+.account-form-grid label span {
+  color: #d16a4a;
+}
+
+.account-form-note {
+  font-size: 13px;
+  color: #6f7f8c;
+  background: #eaf2f7;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 14px 0;
+  line-height: 1.8;
+}
+
+@media(max-width:650px) {
+  .account-workspace {
+    grid-template-columns: 1fr;
+  }
+  .account-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .account-tree-panel,.account-inspector {
+    min-height: 0;
+  }
+}
+
+/* User-adjustable UI: boundaries stay visible and responsive. */
+
+.layout {
+  grid-template-columns: minmax(0,1fr) var(--assistant-width,312px);
+}
+
+.assistant-panel {
+  position: relative;
+  min-height: 250px;
+  align-self: start;
+  min-width: 0;
+}
+
+.assistant-head {
+  min-width: 0;
+}

@@ -1,0 +1,10 @@
+# إعداد Ruff لسكربتات الجودة (Python) — سريع، صارم، ومجاني.
+line-length = 100
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "C4", "PT"]
+ignore = ["E501"]
+
+[lint.per-file-ignores]
+"quality/scripts/generate.py" = ["UP031"]  # صياغة النص المولّد تحتاج % المباشر

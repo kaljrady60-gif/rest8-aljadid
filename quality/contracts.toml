@@ -1,0 +1,99 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# الملف الموحّد (Single Source of Truth) — المحاسب الذكي
+#
+# كل ما يُعرَّف هنا يُولَّد آليًا إلى:
+#   src/generated/contracts.rs        (Rust)
+#   assets/scripts/00-contracts.js    (الواجهة)
+#   templates/components/contracts.html (وسم بيانات للاختبارات)
+# ويُفحص تطابقه في بوابة `python3 quality/gates.py contracts`.
+#
+# قاعدة الاستخدام: أضف/عدّل هنا فقط، ثم نفّذ `python3 quality/gates.py gen`.
+# لا تكتب قيمًا مكرّرة في Rust أو JS بعد اليوم.
+# ═══════════════════════════════════════════════════════════════════════════
+
+schema_version = 1
+generated_note = "مُولَّد آليًا من quality/contracts.toml — لا تُحرّره يدويًا."
+
+[limits]
+# سقف حجم الملف الواحد بالسطور (سياسة الصيانة؛ رُفع إلى 700 بطلب المالك 2026-11-01).
+max_file_lines = 700
+max_script_lines = 700
+max_description_chars = 200
+max_lines_per_entry = 50
+min_lines_per_entry = 2
+max_page_size = 100
+money_scale = 4
+
+[security]
+session_hours = 12
+max_login_failures = 5
+lockout_minutes = 15
+password_min_chars = 10
+
+[roles]
+# ترتيب تصاعدي للصلاحية: كل دور يملك ما قبله.
+order = ["reader", "operator", "admin"]
+labels = { reader = "قارئ", operator = "مُنفّذ", admin = "مدير مالي" }
+
+[currencies]
+# code | الاسم | عدد المنازل | هل هي عملة قانونية (ISO)
+items = [
+  { code = "YER",   label = "ريال يمني · غير محدد الطبعة", iso = true,  decimals = 2 },
+  { code = "YER-A", label = "ريال يمني · طبعة عدن الجديدة", iso = false, decimals = 2 },
+  { code = "YER-S", label = "ريال يمني · طبعة صنعاء القديمة", iso = false, decimals = 2 },
+  { code = "USD",   label = "دولار أمريكي", iso = true, decimals = 2 },
+  { code = "SAR",   label = "ريال سعودي", iso = true, decimals = 2 },
+]
+
+[account]
+categories = ["asset", "liability", "equity", "revenue", "expense"]
+kinds = ["group", "detail"]
+natures = ["debit", "credit"]
+# التصنيفات التي تظهر في قائمة الدخل.
+income_categories = ["revenue", "expense"]
+# التصنيفات التي تظهر في الميزانية العمومية.
+balance_sheet_categories = ["asset", "liability", "equity"]
+
+[funds]
+# أنواع الصناديق كما يعرّفها سجل المالية القائم (finance_funds): نقدية أو بنك.
+kinds = ["cash", "bank"]
+
+[periods]
+statuses = ["open", "soft_closed", "closed"]
+
+[screens]
+# شاشات المالية المنفَّذة فعليًا. تُستخدم لتوليد فهرس الواجهة وفحص التغطية.
+implemented = [
+  { id = "fin.coa",        title = "دليل الحسابات",   api = "/api/finance/accounts" },
+  { id = "fin.journal",    title = "القيود اليومية",  api = "/api/finance/journals" },
+  { id = "fin.ledger",     title = "دفتر الأستاذ",    api = "/api/finance/ledger" },
+  { id = "fin.trial",      title = "ميزان المراجعة",  api = "/api/finance/trial" },
+  { id = "fin.vouchers",   title = "السندات",         api = "/api/finance/vouchers" },
+  { id = "fin.opening",    title = "الأرصدة الافتتاحية", api = "/api/finance/opening" },
+  { id = "fin.cashboxes",  title = "الصناديق",        api = "/api/finance/funds?kind=cash" },
+  { id = "fin.banks",      title = "البنوك",          api = "/api/finance/funds?kind=bank" },
+  { id = "fin.currencies", title = "العملات وأسعار الصرف", api = "/api/finance/fx" },
+  { id = "fin.costcenters", title = "مراكز التكلفة",  api = "/api/finance/dimensions" },
+  { id = "fin.periods",    title = "الإقفال والفترات", api = "/api/finance/periods" },
+  { id = "fin.reports",    title = "التقارير المالية", api = "/api/finance/statements" },
+  { id = "fin.bankrec",    title = "التسوية البنكية", api = "/api/finance/bankrec" },
+  { id = "fin.parties",    title = "الأطراف",         api = "/api/finance/parties" },
+  { id = "fin.checks",     title = "الشيكات",         api = "/api/finance/checks" },
+  { id = "fin.approval",   title = "سير الاعتماد",    api = "/api/finance/approval" },
+  { id = "fin.closing",    title = "الإقفال السنوي",  api = "/api/finance/closing" },
+  { id = "fin.export",     title = "التصدير والطباعة", api = "/api/finance/export" },
+  { id = "fin.assets",     title = "الأصول الثابتة",  api = "/api/finance/assets" },
+  { id = "fin.payroll",    title = "الرواتب",         api = "/api/finance/payroll/runs" },
+  { id = "fin.branches",   title = "الفروع",          api = "/api/finance/branches" },
+  { id = "fin.print",      title = "الطباعة وPDF",    api = "/api/finance/print" },
+]
+
+[reports]
+# تقارير المالية المعتمدة: المعرّف | العنوان | الطبيعة
+items = [
+  { id = "income",    title = "قائمة الدخل",       kind = "statement" },
+  { id = "balance",   title = "الميزانية العمومية", kind = "statement" },
+  { id = "cashflow",  title = "التدفقات النقدية",   kind = "statement" },
+  { id = "general",   title = "اليومية العامة",     kind = "journal" },
+  { id = "trial",     title = "ميزان المراجعة",     kind = "statement" },
+]

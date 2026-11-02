@@ -1,0 +1,32 @@
+[package]
+name = "smart-accountant"
+version = "0.1.0"
+edition = "2024"
+description = "Foundation prototype for Al Muhasib Al Dhaki"
+license = "LicenseRef-Proprietary"
+publish = false
+
+[dependencies]
+askama = { version = "0.16.1", default-features = false, features = ["derive", "std"] }
+axum = { version = "0.8.9", features = ["json"] }
+argon2 = "0.6.0"
+getrandom = "0.4.3"
+sha2 = "0.11.1"
+rpassword = "7.5.4"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "signal"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rust_decimal = { version = "1", features = ["serde-with-str"] }
+rusqlite = { version = "0.41.1", features = ["bundled"] }
+chrono = { version = "0.4", features = ["serde"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tower-http = { version = "0.7.1", features = ["fs", "trace"] }
+ureq = { version = "3", features = ["json"] }
+
+[dev-dependencies]
+tempfile = "3"
+proptest = "1"
+rstest = "0.26"
+insta = { version = "1", features = ["json"] }
+tower = { version = "0.5", features = ["util"] }

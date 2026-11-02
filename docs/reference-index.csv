@@ -1,0 +1,183 @@
+﻿معرّف الشاشة,الإدارة في المرجع,اسم الشاشة,مواقع مطابقة مرشحة للفحص (ليست إثباتا للوظيفة),حالة جرد المكونات
+fin.coa,finance,دليل الحسابات,crates/sa-web/src/screens.rs:337,جرد يدوي أولي - يحتاج استكمال
+fin.journal,finance,القيود اليومية,crates/sa-web/src/screens.rs:338,جرد يدوي أولي - يحتاج استكمال
+fin.ledger,finance,دفتر الأستاذ,crates/sa-web/src/screens.rs:340,لم تُجرد المكونات بعد
+fin.trial,finance,ميزان المراجعة,crates/sa-web/src/screens.rs:339,لم تُجرد المكونات بعد
+fin.vouchers,finance,السندات,crates/sa-web/src/screens.rs:341,لم تُجرد المكونات بعد
+fin.opening,finance,الأرصدة الافتتاحية,crates/sa-web/src/screens.rs:346,لم تُجرد المكونات بعد
+fin.cashboxes,finance,الصناديق,crates/sa-web/src/screens.rs:342,لم تُجرد المكونات بعد
+fin.banks,finance,البنوك,crates/sa-web/src/screens.rs:343,لم تُجرد المكونات بعد
+fin.fx,finance,صرف العملة,crates/sa-web/src/screens.rs:349,لم تُجرد المكونات بعد
+fin.adjustments,finance,التسويات,crates/sa-web/src/screens.rs:350,لم تُجرد المكونات بعد
+fin.bankrec,finance,التسوية البنكية,crates/sa-web/src/screens.rs:351,لم تُجرد المكونات بعد
+fin.currencies,finance,العملات,crates/sa-web/src/screens.rs:352,لم تُجرد المكونات بعد
+fin.costcenters,finance,مراكز التكلفة,crates/sa-web/src/screens.rs:353,لم تُجرد المكونات بعد
+fin.closing,finance,الإقفالات,crates/sa-web/src/screens.rs:345,لم تُجرد المكونات بعد
+fin.reports,finance,التقارير المالية,crates/sa-web/src/screens.rs:347,لم تُجرد المكونات بعد
+fin.ledgersettings,finance,متغيرات الأستاذ,crates/sa-web/src/screens.rs:356,لم تُجرد المكونات بعد
+fin.orgstructure,finance,الهيكل الإداري,crates/sa-web/src/screens.rs:357,لم تُجرد المكونات بعد
+fin.intermediate,finance,الحسابات الوسيطة,crates/sa-web/src/screens.rs:354,لم تُجرد المكونات بعد
+fin.requests,finance,طلبات القيود والسندات,crates/sa-web/src/screens.rs:363,لم تُجرد المكونات بعد
+fin.cheques,finance,الشيكات المستحقة,crates/sa-web/src/screens.rs:375,لم تُجرد المكونات بعد
+fin.docreview,finance,مراجعة الوثائق,crates/sa-web/src/screens.rs:364,لم تُجرد المكونات بعد
+fin.branches,finance,الفروع والمجموعات,crates/sa-web/src/screens.rs:358,لم تُجرد المكونات بعد
+fin.plans,finance,المخططات والعمولات,crates/sa-web/src/screens.rs:366,لم تُجرد المكونات بعد
+fin.setup,finance,بيانات الدول,crates/sa-web/src/screens.rs:359,لم تُجرد المكونات بعد
+fin.periods,finance,فترات النظام,crates/sa-web/src/screens.rs:344,لم تُجرد المكونات بعد
+fin.scanner,finance,قراءة الفواتير المصورة,crates/sa-web/src/screens.rs:367,لم تُجرد المكونات بعد
+fin.taxes,finance,الضرائب والرسوم,crates/sa-web/src/screens.rs:361,لم تُجرد المكونات بعد
+fin.dimensions,finance,الأبعاد التحليلية,crates/sa-web/src/screens.rs:355,لم تُجرد المكونات بعد
+fin.numbering,finance,ترقيم المستندات,crates/sa-web/src/screens.rs:360,لم تُجرد المكونات بعد
+fin.taxreturns,finance,الإقرارات الضريبية,crates/sa-web/src/screens.rs:362,لم تُجرد المكونات بعد
+fin.notes,finance,الإشعارات المدينة والدائنة,crates/sa-web/src/screens.rs:368,لم تُجرد المكونات بعد
+fin.journalreview,finance,مراجعة وترحيل القيود,crates/sa-web/src/screens.rs:365,لم تُجرد المكونات بعد
+fin.zakathaul,finance,دورة استحقاق الزكاة,crates/sa-web/src/screens.rs:369,لم تُجرد المكونات بعد
+sal.budget,finance,الموازنة,crates/sa-web/src/screens_budget.rs:25,لم تُجرد المكونات بعد
+sal.budgetext,finance,تعديل الموازنة,crates/sa-web/src/screens_budget.rs:26,لم تُجرد المكونات بعد
+sal.invoices,sales,الفواتير,crates/sa-web/src/screens.rs:379,لم تُجرد المكونات بعد
+sal.customers,sales,العملاء,crates/sa-web/src/screens.rs:377,لم تُجرد المكونات بعد
+sal.custgroups,sales,مجموعات العملاء,crates/sa-web/src/screens_sale/core.rs:17,لم تُجرد المكونات بعد
+sal.reps,sales,المندوبون,crates/sa-web/src/screens_sale/core.rs:18,لم تُجرد المكونات بعد
+sal.collectors,sales,المحصلون والبطاقات,crates/sa-web/src/screens_sale/core.rs:19,لم تُجرد المكونات بعد
+sal.pos,sales,نقطة البيع,crates/sa-web/src/screens.rs:370,لم تُجرد المكونات بعد
+sal.cashier,sales,تصفية الكاشيرات,crates/sa-web/src/screens.rs:376,لم تُجرد المكونات بعد
+sal.posops,sales,عمليات POS متقدمة,crates/sa-web/src/screens_sale/commissions_pos.rs:13,لم تُجرد المكونات بعد
+sal.commissions,sales,العمولات,crates/sa-web/src/screens_sale/commissions_pos.rs:11,لم تُجرد المكونات بعد
+sal.posmachines,sales,أجهزة POS,crates/sa-web/src/screens_sale/commissions_pos.rs:12,لم تُجرد المكونات بعد
+sal.posreports,sales,تقارير نقاط البيع,crates/sa-web/src/screens_sale/commissions_pos.rs:14,لم تُجرد المكونات بعد
+sal.settings,sales,متغيرات العميل,crates/sa-web/src/screens_sale/core.rs:21,لم تُجرد المكونات بعد
+sal.quotations,sales,عروض الأسعار,crates/sa-web/src/screens_sale/core.rs:23,لم تُجرد المكونات بعد
+sal.returns,sales,المردودات,crates/sa-web/src/screens.rs:380,لم تُجرد المكونات بعد
+sal.orders,sales,طلبات العملاء,crates/sa-web/src/screens_sale/core.rs:24,لم تُجرد المكونات بعد
+sal.types,sales,أنواع المبيعات,crates/sa-web/src/screens_sale/core.rs:20,لم تُجرد المكونات بعد
+sal.operations,sales,عمليات متقدمة,crates/sa-web/src/screens_sale/core.rs:25,لم تُجرد المكونات بعد
+sal.setupfull,sales,تهيئة كاملة,crates/sa-web/src/screens_sale/core.rs:22,لم تُجرد المكونات بعد
+sal.aging,sales,أعمار الديون والترميزات,crates/sa-web/src/screens_sale/commissions_pos.rs:15,لم تُجرد المكونات بعد
+sal.reports,sales,التقارير,crates/sa-web/src/screens_sale/commissions_pos.rs:16 | crates/sa-web/src/screens_sale/core.rs:29,لم تُجرد المكونات بعد
+pur.orders,purchases,أوامر الشراء,crates/sa-web/src/screens_pur/core.rs:17,لم تُجرد المكونات بعد
+pur.suppliers,purchases,الموردون,crates/sa-web/src/screens.rs:378,لم تُجرد المكونات بعد
+pur.invoices,purchases,فواتير الشراء,crates/sa-web/src/screens.rs:382,لم تُجرد المكونات بعد
+pur.payments,purchases,سندات الصرف,crates/sa-web/src/screens_pur/payments_reports.rs:22,لم تُجرد المكونات بعد
+pur.returns,purchases,مردودات المشتريات,crates/sa-web/src/screens.rs:381,لم تُجرد المكونات بعد
+pur.requests,purchases,طلبات وعروض الشراء,crates/sa-web/src/screens_pur/core.rs:18,لم تُجرد المكونات بعد
+pur.costtypes,purchases,أنواع التكاليف والتهيئة,crates/sa-web/src/screens_pur/core.rs:19,لم تُجرد المكونات بعد
+pur.items,purchases,أصناف الموردين,crates/sa-web/src/screens_pur/core.rs:21,لم تُجرد المكونات بعد
+pur.shipping,purchases,الشحن والاستيراد,crates/sa-web/src/screens_pur/core.rs:22,لم تُجرد المكونات بعد
+pur.operations,purchases,عمليات متقدمة,crates/sa-web/src/screens_pur/core.rs:23,لم تُجرد المكونات بعد
+pur.reports,purchases,التقارير والمتغيرات,crates/sa-web/src/screens_pur/core.rs:24 | crates/sa-web/src/screens_pur/payments_reports.rs:23,لم تُجرد المكونات بعد
+pur.charges,purchases,أعباء المشتريات,crates/sa-web/src/screens_pur/core.rs:20,لم تُجرد المكونات بعد
+pur.localpurchase,purchases,فاتورة شراء محلية,crates/sa-web/src/screens_pur/payments_reports.rs:21,لم تُجرد المكونات بعد
+rep.balance,reports,الميزانية العمومية,crates/sa-web/src/screens_rep.rs:32,لم تُجرد المكونات بعد
+rep.income,reports,قائمة الدخل,crates/sa-web/src/screens_rep.rs:37,لم تُجرد المكونات بعد
+rep.cashflow,reports,التدفقات النقدية,crates/sa-web/src/screens_rep.rs:42,لم تُجرد المكونات بعد
+rep.ratios,reports,تحليل النسب,crates/sa-web/src/screens_rep.rs:47,لم تُجرد المكونات بعد
+ast.list,assets,الأصول,crates/sa-web/src/screens_ast.rs:19,لم تُجرد المكونات بعد
+ast.categories,assets,طرق الإهلاك,crates/sa-web/src/screens_ast.rs:20,لم تُجرد المكونات بعد
+ast.schedule,assets,جدول الإهلاك,crates/sa-web/src/screens_ast.rs:21,لم تُجرد المكونات بعد
+ast.disposal,assets,التخلص,crates/sa-web/src/screens_ast.rs:22,لم تُجرد المكونات بعد
+ast.maintenance,assets,الصيانة,crates/sa-web/src/screens_ast.rs:23,لم تُجرد المكونات بعد
+hr.employees,hr,الموظفون,crates/sa-web/src/screens_hr/core.rs:20,لم تُجرد المكونات بعد
+hr.payroll,hr,الرواتب,crates/sa-web/src/screens_hr/core.rs:21,لم تُجرد المكونات بعد
+hr.leaves,hr,الإجازات,crates/sa-web/src/screens_hr/core.rs:22,لم تُجرد المكونات بعد
+hr.evaluations,hr,التقييمات,crates/sa-web/src/screens_hr/core.rs:23,لم تُجرد المكونات بعد
+hr.recruitment,hr,التوظيف والوثائق,crates/sa-web/src/screens_hr/core.rs:24,لم تُجرد المكونات بعد
+hr.movements,hr,الحركات والخدمات,crates/sa-web/src/screens_hr/movements_ops.rs:20,لم تُجرد المكونات بعد
+hr.training,hr,التدريب والتأهيل,crates/sa-web/src/screens_hr/movements_ops.rs:21,لم تُجرد المكونات بعد
+hr.settings,hr,تهيئة النظام,crates/sa-web/src/screens_hr/movements_ops.rs:22,لم تُجرد المكونات بعد
+hr.operations,hr,العمليات التشغيلية,crates/sa-web/src/screens_hr/movements_ops.rs:23,لم تُجرد المكونات بعد
+sys.dashboard,system,لوحة المعلومات الموحدة,crates/sa-web/src/screens.rs:384,لم تُجرد المكونات بعد
+sys.brain,system,العقل المركزي,crates/sa-web/src/screens_sys/governance.rs:36,لم تُجرد المكونات بعد
+sys.users,system,المستخدمون,crates/sa-web/src/screens.rs:399,لم تُجرد المكونات بعد
+sys.groups,system,مجموعات المستخدمين,crates/sa-web/src/screens_sys/admin_controls.rs:27,لم تُجرد المكونات بعد
+sys.permissions,system,الصلاحيات,crates/sa-web/src/screens_sys/admin_controls.rs:28,لم تُجرد المكونات بعد
+sys.tabperms,system,صلاحيات التبويبات,crates/sa-web/src/screens_sys/admin_controls.rs:29,لم تُجرد المكونات بعد
+sys.monitor,system,مراقبة المستخدمين,crates/sa-web/src/screens.rs:431,لم تُجرد المكونات بعد
+sys.audit,system,سجل العمليات,crates/sa-web/src/screens.rs:400,لم تُجرد المكونات بعد
+sys.annualclose,system,الإقفال والفترات,crates/sa-web/src/screens_sys/admin_controls.rs:30,لم تُجرد المكونات بعد
+sys.backup,system,النسخ الاحتياطي,crates/sa-web/src/screens.rs:406,لم تُجرد المكونات بعد
+sys.dbmanage,system,إدارة قاعدة البيانات,crates/sa-web/src/screens.rs:444,لم تُجرد المكونات بعد
+sys.suspension,system,التوقيف والإيقاف,crates/sa-web/src/screens_sys/admin_controls.rs:32,لم تُجرد المكونات بعد
+sys.yeartransfer,system,نقل البيانات للسنة,crates/sa-web/src/screens_sys/admin_controls.rs:33,لم تُجرد المكونات بعد
+sys.units,system,الوحدات والأرشفة,crates/sa-web/src/screens.rs:420,لم تُجرد المكونات بعد
+sys.signatures,system,التواقيعات,crates/sa-web/src/screens.rs:421,لم تُجرد المكونات بعد
+sys.mandatory,system,حقول النوافذ والجداول,crates/sa-web/src/screens.rs:427,لم تُجرد المكونات بعد
+sys.templates,system,قوالب التقارير,crates/sa-web/src/screens.rs:424,لم تُجرد المكونات بعد
+sys.alerts,system,تنبيهات النظام,crates/sa-web/src/screens.rs:488,لم تُجرد المكونات بعد
+sys.prefs,system,خصوصية المستخدم,crates/sa-web/src/screens.rs:476,لم تُجرد المكونات بعد
+sys.company,system,وصف الشركة,crates/sa-web/src/screens.rs:451,لم تُجرد المكونات بعد
+sys.apikeys,system,مفتاح API,crates/sa-web/src/screens.rs:430,لم تُجرد المكونات بعد
+sys.advanced,system,إعدادات متقدمة,crates/sa-web/src/screens_sys/governance.rs:37,لم تُجرد المكونات بعد
+sys.anomaly,system,اكتشاف الشذوذ,crates/sa-web/src/screens_sys/governance.rs:38,لم تُجرد المكونات بعد
+sys.engineer,system,الإعدادات الخاصة,crates/sa-web/src/screens_sys/admin_controls.rs:34,لم تُجرد المكونات بعد
+sys.deployment,system,نمط النشر والتخزين,crates/sa-web/src/screens.rs:407,لم تُجرد المكونات بعد
+sys.dailyclose,system,الإقفال اليومي,crates/sa-web/src/screens_sys/admin_controls.rs:31,لم تُجرد المكونات بعد
+sys.hierarchy,system,إدارة القواعد الهرمية,crates/sa-web/src/screens_sys/governance.rs:39,لم تُجرد المكونات بعد
+sys.learning,system,تعلّم الوكيل,crates/sa-web/src/screens_sys/governance.rs:40,لم تُجرد المكونات بعد
+sys.metadata,system,محركات البيانات الوصفية,crates/sa-web/src/screens_sys/governance.rs:41,لم تُجرد المكونات بعد
+sys.ai,system,إعدادات الذكاء,crates/sa-web/src/screens_sys/governance.rs:42,لم تُجرد المكونات بعد
+inv.s00,inventory,الأصناف,crates/sa-web/src/screens.rs:383,لم تُجرد المكونات بعد
+inv.s01,inventory,المستودعات,crates/sa-web/src/screens.rs:371,لم تُجرد المكونات بعد
+inv.s02,inventory,حركات المخزون,crates/sa-web/src/screens_inv.rs:15,لم تُجرد المكونات بعد
+inv.s03,inventory,الجرد,crates/sa-web/src/screens.rs:372,لم تُجرد المكونات بعد
+inv.s04,inventory,المجموعات المخزنية,crates/sa-web/src/screens_inv.rs:20,لم تُجرد المكونات بعد
+inv.s05,inventory,ربط الحسابات,crates/sa-web/src/screens_inv.rs:23,لم تُجرد المكونات بعد
+inv.s06,inventory,الموزنات,crates/sa-web/src/screens_inv.rs:28,لم تُجرد المكونات بعد
+inv.s07,inventory,QR Code,crates/sa-web/src/screens_inv.rs:32,لم تُجرد المكونات بعد
+inv.s08,inventory,الدفعات,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+inv.s09,inventory,الرفوف,crates/sa-web/src/screens_inv.rs:54,لم تُجرد المكونات بعد
+inv.s10,inventory,مواقع الأصناف,crates/sa-web/src/screens_inv.rs:58,لم تُجرد المكونات بعد
+inv.s11,inventory,تسعيرة الأصناف,crates/sa-web/src/screens_inv.rs:63,لم تُجرد المكونات بعد
+inv.s12,inventory,موردو الأصناف,crates/sa-web/src/screens_inv.rs:79,لم تُجرد المكونات بعد
+inv.s13,inventory,الأرقام التسلسلية,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+inv.s14,inventory,الباركودات,crates/sa-web/src/screens.rs:373,لم تُجرد المكونات بعد
+inv.s15,inventory,بيانات الأصناف,crates/sa-web/src/screens_inv.rs:99,لم تُجرد المكونات بعد
+inv.s16,inventory,دفعات الأصناف,crates/sa-web/src/screens_inv.rs:33,لم تُجرد المكونات بعد
+inv.s17,inventory,الاستلام المخزني,crates/sa-web/src/screens_inv.rs:122,لم تُجرد المكونات بعد
+inv.s18,inventory,أوامر التوريد,crates/sa-web/src/screens_inv.rs:135,لم تُجرد المكونات بعد
+inv.s19,inventory,أوامر الصرف,crates/sa-web/src/screens_inv.rs:148,لم تُجرد المكونات بعد
+inv.s20,inventory,التحويل المخزني,crates/sa-web/src/screens.rs:374,لم تُجرد المكونات بعد
+inv.s21,inventory,تسويات المخزون,crates/sa-web/src/screens_inv.rs:161,لم تُجرد المكونات بعد
+inv.s22,inventory,عهد الموظف المخزني,crates/sa-web/src/screens_inv.rs:174,لم تُجرد المكونات بعد
+inv.s23,inventory,تصفية العهد المخزني,crates/sa-web/src/screens_inv.rs:187,لم تُجرد المكونات بعد
+inv.s24,inventory,تحضير الكميات,crates/sa-web/src/screens_inv.rs:200,لم تُجرد المكونات بعد
+inv.s25,inventory,عمليات الأرقام التسلسلية,crates/sa-web/src/screens_inv.rs:89,لم تُجرد المكونات بعد
+inv.s26,inventory,الأمانات,crates/sa-web/src/screens_inv.rs:213,لم تُجرد المكونات بعد
+inv.s27,inventory,قوالب الأصناف,crates/sa-web/src/screens_inv.rs:257,لم تُجرد المكونات بعد
+inv.s28,inventory,تحويل لأصل ثابت,crates/sa-web/src/screens_inv.rs:278,لم تُجرد المكونات بعد
+inv.s29,inventory,متغيرات المخزن,crates/sa-web/src/screens_inv.rs:284,لم تُجرد المكونات بعد
+inv.s30,inventory,وحدات القياس,crates/sa-web/src/screens_inv.rs:290,لم تُجرد المكونات بعد
+inv.s31,inventory,أنواع الأصناف,crates/sa-web/src/screens_inv.rs:296,لم تُجرد المكونات بعد
+inv.s32,inventory,التهيئة,crates/sa-web/src/screens_inv.rs:299,لم تُجرد المكونات بعد
+inv.s33,inventory,التقارير,crates/sa-web/src/screens_inv.rs:348,لم تُجرد المكونات بعد
+inv.s34,inventory,معايير التقييم والملحقات,crates/sa-web/src/screens_inv.rs:366,لم تُجرد المكونات بعد
+inv.s35,inventory,التنبؤ الاستباقي,crates/sa-web/src/screens_inv.rs:381,لم تُجرد المكونات بعد
+inv.reserve,inventory,حجز الكميات,crates/sa-web/src/screens_inv.rs:404,لم تُجرد المكونات بعد
+inv.auxops,inventory,عمليات إضافية,crates/sa-web/src/screens_inv.rs:392,لم تُجرد المكونات بعد
+inv.transferrecv,inventory,استلام التحويل المخزني,crates/sa-web/src/screens_inv.rs:387,لم تُجرد المكونات بعد
+inv.custodyorders,inventory,أوامر الأمانات,crates/sa-web/src/screens_inv.rs:226,لم تُجرد المكونات بعد
+inv.matrequest,inventory,طلب صرف/تحويل مواد,crates/sa-web/src/screens_inv.rs:244,لم تُجرد المكونات بعد
+fin.rules,finance,قواعد الترحيل,crates/sa-web/src/screens.rs:348,لم تُجرد المكونات بعد
+sys.chat,system,الدردشة الذكية,crates/sa-web/src/screens_sys/governance.rs:43,لم تُجرد المكونات بعد
+sys.agents,system,الوكلاء الذكية,crates/sa-web/src/screens_sys/governance.rs:44,لم تُجرد المكونات بعد
+sys.sync,system,المزامنة والأجهزة,crates/sa-web/src/screens_sys/governance.rs:45,لم تُجرد المكونات بعد
+sys.tashkeel,system,التشكيل العربي,crates/sa-web/src/screens_sys/governance.rs:46,لم تُجرد المكونات بعد
+sys.memory,system,ذاكرة الوكيل,crates/sa-web/src/screens_sys/governance.rs:47,لم تُجرد المكونات بعد
+fin.budgethub,finance,💰 موازنات الإدارة,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+fin.reviewhub,finance,📥 بوابة المراجعة والاعتماد,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+fin.closehub,finance,🔒 الإقفال المالي الموحّد,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+fin.dimhub,finance,🧭 الأبعاد ومراكز التكلفة,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+fin.finhub,finance,⚙️ الإعدادات المالية,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+sal.custhub,sales,👥 العملاء,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+sal.poshub,sales,🧾 كونسول نقاط البيع,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+inv.itemhub,inventory,📦 تهيئة المخزون والأصناف,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+ast.hub,assets,🏭 الأصول والإهلاك,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+hr.hub,hr,🧑‍💼 شؤون الموظفين,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+sys.userhub,system,🔐 المستخدمون والصلاحيات,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+sys.dbhub,system,🗄️ النسخ وقاعدة البيانات,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+sys.advhub,system,🛠️ الإعدادات المتقدمة,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+sys.aihub,system,🤖 مركز قيادة الذكاء والوكلاء,لم يعثر البحث الآلي على مطابقة مباشرة,لم تُجرد المكونات بعد
+sys.designsystem,system,🎨 نظام التصميم,crates/sa-web/src/screens.rs:336,لم تُجرد المكونات بعد
+pur.supgroups,purchases,مجموعات الموردين,crates/sa-web/src/model_symmetry.rs:202,لم تُجرد المكونات بعد
+inv.whgroups,inventory,مجموعات المخازن,crates/sa-web/src/model_symmetry.rs:203,لم تُجرد المكونات بعد
+inv.transfertypes,inventory,أنواع التحويل المخزني,crates/sa-web/src/model_symmetry.rs:204,لم تُجرد المكونات بعد
+sys.opperms,system,صلاحيات العمليات,crates/sa-web/src/model_symmetry.rs:201,لم تُجرد المكونات بعد

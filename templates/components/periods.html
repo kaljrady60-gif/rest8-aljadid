@@ -1,0 +1,16 @@
+<section id="view-periods" class="detail-view hidden">
+<div class="detail-banner">
+<div><span class="detail-kicker">المالية / إعدادات الفترات</span><h2>فترات الترحيل</h2><p>تاريخ كل قيد يجب أن يقع ضمن فترة مفتوحة. إغلاق الفترة يمنع الترحيل فيها ولا ينفّذ إقفال النتائج.</p></div><button type="button" class="ghost-btn" data-open="journals">القيود اليومية</button></div>
+
+<div class="table-card"><h3>إضافة فترة</h3><p class="draft-limit-note">الفترات لا تتداخل، وتواريخها لا تُعدَّل بعد إنشائها. راجعها قبل الحفظ.</p>
+<form id="period-form" class="period-form"><label>اسم الفترة <input name="name" required maxlength="100" data-help="اسم واضح للفترة، حتى 100 حرف."></label><label>من تاريخ <input type="date" name="start_date" required data-help="أول يوم مشمول في الفترة."></label><label>إلى تاريخ <input type="date" name="end_date" required data-help="آخر يوم مشمول في الفترة."></label><button class="primary-btn" type="submit">إضافة الفترة</button></form>
+<div id="period-error" class="form-message hidden" role="alert"></div></div>
+<div class="table-card period-list">
+<div class="table-head">
+<div><h3>الفترات المسجلة</h3><p>المسودات لا تدخل الأرصدة؛ القيود السابقة دون فترة تُعرض منفصلة.</p></div><button class="ghost-btn" type="button" id="period-refresh">تحديث ↻</button></div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th data-help="اسم الفترة الثابت بعد إنشائها.">الفترة</th><th data-help="اليوم الأول المشمول.">من</th><th data-help="اليوم الأخير المشمول.">إلى</th><th data-help="المفتوحة تسمح بالترحيل والمغلقة تمنعه.">الحالة</th><th data-help="عدد القيود المرتبطة بهذه الفترة وقت ترحيلها.">مرحّل مرتبط</th><th data-help="عدد المسودات غير المرحلة التي تقع تواريخها ضمن الفترة.">مسودات</th><th data-help="قيود مرحّلة قديمة قبل إضافة الفترات؛ لم تُربط تلقائيًا بها.">مرحّل قديم بلا ربط</th><th data-help="إغلاق أو إعادة فتح الفترة وعرض سجل حالتها.">الإجراءات</th></tr></thead>
+<tbody id="period-list"></tbody></table></div><p id="period-empty" class="draft-limit-note">لا توجد فترات مسجلة.</p>
+<div id="period-history" class="period-history hidden" aria-live="polite"></div></div></section>

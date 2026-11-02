@@ -1,0 +1,38 @@
+<details class="registry-panel" id="registry-panel">
+<summary data-help="تهيئة تجريبية للشركات والفروع والأطراف والصناديق وإنشاء سند مرتبط.">الشركات والفروع والسند المرتبط · إعداد تجريبي</summary>
+<p class="voucher-notice">سجل السندات والمسودات المرتبطة بشركات وفروع محددة، بصلاحيات محلية.</p>
+<p>أنشئ الحسابات التفصيلية أولًا من دليل الحسابات، ثم سجّل شركة وفرعًا، واربط حسابين غير مستخدمين بالشركة، ثم أنشئ صندوقًا وطرفًا في الفرع نفسه.</p>
+<button type="button" class="ghost-btn" id="registry-refresh" data-help="تحميل السجل ودليل الحسابات من الخادم.">↻ تحميل وتحديث البيانات</button>
+<p id="registry-status" role="status" aria-live="polite">افتح اللوحة لتحميل البيانات.</p>
+<div class="registry-grid">
+<form id="registry-form" class="registry-card">
+<h3>تهيئة السجل</h3>
+<label>نوع السجل<select name="type" data-help="حدد نوع العنصر المطلوب إنشاؤه."><option value="company">شركة</option><option value="branch">فرع</option><option value="account_scope">ربط حساب بشركة</option><option value="fund">صندوق أو بنك</option><option value="party">طرف</option></select></label>
+<label data-reg="company_id">الشركة<select name="company_id"></select></label>
+<label data-reg="branch_id">الفرع<select name="branch_id"></select></label>
+<label data-reg="account_id">الحساب التفصيلي<select name="account_id"></select></label>
+<label data-reg="code">الرمز<input name="code" maxlength="30"></label>
+<label data-reg="name">الاسم<input name="name" maxlength="120"></label>
+<label data-reg="kind">النوع<select name="kind"><option value="cash">صندوق</option><option value="bank">بنك</option></select></label>
+<label data-reg="role">تصنيف الطرف<select name="role"><option value="customer">عميل</option><option value="supplier">مورد</option><option value="both">عميل ومورد</option></select></label>
+<button class="primary-btn" type="submit">حفظ السجل</button>
+</form>
+<form id="linked-voucher-form" class="registry-card">
+<h3>سند مرتبط تجريبي</h3>
+<label>الشركة<select name="company_id" required></select></label>
+<label>الفرع<select name="branch_id" required></select></label>
+<label>الصندوق أو البنك<select name="fund_id" required></select></label>
+<label>الطرف<select name="party_id" required></select></label>
+<label>نوع السند<select name="kind"><option value="receipt">قبض</option><option value="payment">صرف</option></select></label>
+<label>التاريخ<input name="date" type="date" required></label>
+<label>العملة<select name="currency">{% include "components/currency-options.html" %}</select></label>
+<label>المبلغ<input name="amount" required maxlength="30" inputmode="decimal" dir="ltr" placeholder="0.00"></label>
+<label>البيان<input name="description" required maxlength="200"></label>
+<label>المرجع<input name="reference" maxlength="100"></label>
+<button class="primary-btn" type="submit">حفظ مسودة السند والقيد</button>
+<button type="button" class="ghost-btn" id="linked-reset">بدء طلب جديد بعد مراجعة السجل</button>
+<small>إذا انقطع الاتصال، أعد الإرسال دون تغيير البيانات. قبل بدء طلب جديد راجع السجل لتجنب التكرار.</small>
+</form>
+</div>
+<div id="registry-overview" aria-live="polite"></div>
+</details>

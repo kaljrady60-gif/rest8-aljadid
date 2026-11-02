@@ -1,0 +1,2390 @@
+{
+ "generated_from": "airp_system/src/lib/registry/{screenRegistry,navSections}.ts + data/departments.ts",
+ "screens": [
+  {
+   "perm_id": "fin.coa",
+   "dept_id": "finance",
+   "tab_index": 0,
+   "name": "دليل الحسابات",
+   "icon": "📋",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.journal",
+   "dept_id": "finance",
+   "tab_index": 1,
+   "name": "القيود اليومية",
+   "icon": "📝",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.ledger",
+   "dept_id": "finance",
+   "tab_index": 2,
+   "name": "دفتر الأستاذ",
+   "icon": "📖",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.trial",
+   "dept_id": "finance",
+   "tab_index": 3,
+   "name": "ميزان المراجعة",
+   "icon": "⚖️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.vouchers",
+   "dept_id": "finance",
+   "tab_index": 4,
+   "name": "السندات",
+   "icon": "🧾",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.opening",
+   "dept_id": "finance",
+   "tab_index": 5,
+   "name": "الأرصدة الافتتاحية",
+   "icon": "🔢",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.cashboxes",
+   "dept_id": "finance",
+   "tab_index": 6,
+   "name": "الصناديق",
+   "icon": "💰",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.banks",
+   "dept_id": "finance",
+   "tab_index": 7,
+   "name": "البنوك",
+   "icon": "🏦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.fx",
+   "dept_id": "finance",
+   "tab_index": 8,
+   "name": "صرف العملة",
+   "icon": "💱",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.adjustments",
+   "dept_id": "finance",
+   "tab_index": 9,
+   "name": "التسويات",
+   "icon": "🔧",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.bankrec",
+   "dept_id": "finance",
+   "tab_index": 10,
+   "name": "التسوية البنكية",
+   "icon": "🔗",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.currencies",
+   "dept_id": "finance",
+   "tab_index": 11,
+   "name": "العملات",
+   "icon": "💵",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.costcenters",
+   "dept_id": "finance",
+   "tab_index": 12,
+   "name": "مراكز التكلفة",
+   "icon": "🎯",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.closing",
+   "dept_id": "finance",
+   "tab_index": 13,
+   "name": "الإقفالات",
+   "icon": "📅",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.reports",
+   "dept_id": "finance",
+   "tab_index": 14,
+   "name": "التقارير المالية",
+   "icon": "📊",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.ledgersettings",
+   "dept_id": "finance",
+   "tab_index": 15,
+   "name": "متغيرات الأستاذ",
+   "icon": "⚙️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.orgstructure",
+   "dept_id": "finance",
+   "tab_index": 16,
+   "name": "الهيكل الإداري",
+   "icon": "🏢",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.intermediate",
+   "dept_id": "finance",
+   "tab_index": 17,
+   "name": "الحسابات الوسيطة",
+   "icon": "🔀",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.requests",
+   "dept_id": "finance",
+   "tab_index": 18,
+   "name": "طلبات القيود والسندات",
+   "icon": "📨",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.cheques",
+   "dept_id": "finance",
+   "tab_index": 19,
+   "name": "الشيكات المستحقة",
+   "icon": "🏷️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.docreview",
+   "dept_id": "finance",
+   "tab_index": 20,
+   "name": "مراجعة الوثائق",
+   "icon": "🔍",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.branches",
+   "dept_id": "finance",
+   "tab_index": 21,
+   "name": "الفروع والمجموعات",
+   "icon": "🌿",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.plans",
+   "dept_id": "finance",
+   "tab_index": 22,
+   "name": "المخططات والعمولات",
+   "icon": "📈",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.setup",
+   "dept_id": "finance",
+   "tab_index": 23,
+   "name": "بيانات الدول",
+   "icon": "🌍",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.periods",
+   "dept_id": "finance",
+   "tab_index": 24,
+   "name": "فترات النظام",
+   "icon": "📅",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.scanner",
+   "dept_id": "finance",
+   "tab_index": 25,
+   "name": "قراءة الفواتير المصورة",
+   "icon": "📷",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.taxes",
+   "dept_id": "finance",
+   "tab_index": 26,
+   "name": "الضرائب والرسوم",
+   "icon": "🧮",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.dimensions",
+   "dept_id": "finance",
+   "tab_index": 27,
+   "name": "الأبعاد التحليلية",
+   "icon": "🏷",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.numbering",
+   "dept_id": "finance",
+   "tab_index": 28,
+   "name": "ترقيم المستندات",
+   "icon": "#️⃣",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.taxreturns",
+   "dept_id": "finance",
+   "tab_index": 29,
+   "name": "الإقرارات الضريبية",
+   "icon": "📋",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.notes",
+   "dept_id": "finance",
+   "tab_index": 30,
+   "name": "الإشعارات المدينة والدائنة",
+   "icon": "📨",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.journalreview",
+   "dept_id": "finance",
+   "tab_index": 31,
+   "name": "مراجعة وترحيل القيود",
+   "icon": "🔍",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.zakathaul",
+   "dept_id": "finance",
+   "tab_index": 32,
+   "name": "دورة استحقاق الزكاة",
+   "icon": "🌙",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sal.budget",
+   "dept_id": "finance",
+   "tab_index": 33,
+   "name": "الموازنة",
+   "icon": "📊",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.budgetext",
+   "dept_id": "finance",
+   "tab_index": 34,
+   "name": "تعديل الموازنة",
+   "icon": "📝",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.invoices",
+   "dept_id": "sales",
+   "tab_index": 0,
+   "name": "الفواتير",
+   "icon": "📄",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.customers",
+   "dept_id": "sales",
+   "tab_index": 1,
+   "name": "العملاء",
+   "icon": "👥",
+   "initial_tab": "customers",
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.custgroups",
+   "dept_id": "sales",
+   "tab_index": 2,
+   "name": "مجموعات العملاء",
+   "icon": "👪",
+   "initial_tab": "customerGroups",
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.reps",
+   "dept_id": "sales",
+   "tab_index": 3,
+   "name": "المندوبون",
+   "icon": "🧑‍💼",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.collectors",
+   "dept_id": "sales",
+   "tab_index": 4,
+   "name": "المحصلون والبطاقات",
+   "icon": "💳",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.pos",
+   "dept_id": "sales",
+   "tab_index": 5,
+   "name": "نقطة البيع",
+   "icon": "🛒",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.cashier",
+   "dept_id": "sales",
+   "tab_index": 6,
+   "name": "تصفية الكاشيرات",
+   "icon": "🧾",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.posops",
+   "dept_id": "sales",
+   "tab_index": 7,
+   "name": "عمليات POS متقدمة",
+   "icon": "⚡",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.commissions",
+   "dept_id": "sales",
+   "tab_index": 8,
+   "name": "العمولات",
+   "icon": "💸",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.posmachines",
+   "dept_id": "sales",
+   "tab_index": 9,
+   "name": "أجهزة POS",
+   "icon": "🖥️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.posreports",
+   "dept_id": "sales",
+   "tab_index": 10,
+   "name": "تقارير نقاط البيع",
+   "icon": "📈",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.settings",
+   "dept_id": "sales",
+   "tab_index": 11,
+   "name": "متغيرات العميل",
+   "icon": "⚙️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sal.quotations",
+   "dept_id": "sales",
+   "tab_index": 12,
+   "name": "عروض الأسعار",
+   "icon": "📑",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.returns",
+   "dept_id": "sales",
+   "tab_index": 13,
+   "name": "المردودات",
+   "icon": "↩️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.orders",
+   "dept_id": "sales",
+   "tab_index": 14,
+   "name": "طلبات العملاء",
+   "icon": "📋",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.types",
+   "dept_id": "sales",
+   "tab_index": 15,
+   "name": "أنواع المبيعات",
+   "icon": "🏷️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.operations",
+   "dept_id": "sales",
+   "tab_index": 16,
+   "name": "عمليات متقدمة",
+   "icon": "⚙️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.setupfull",
+   "dept_id": "sales",
+   "tab_index": 17,
+   "name": "تهيئة كاملة",
+   "icon": "🔧",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sal.aging",
+   "dept_id": "sales",
+   "tab_index": 18,
+   "name": "أعمار الديون والترميزات",
+   "icon": "⏳",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.reports",
+   "dept_id": "sales",
+   "tab_index": 19,
+   "name": "التقارير",
+   "icon": "📊",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.orders",
+   "dept_id": "purchases",
+   "tab_index": 0,
+   "name": "أوامر الشراء",
+   "icon": "📋",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.suppliers",
+   "dept_id": "purchases",
+   "tab_index": 1,
+   "name": "الموردون",
+   "icon": "🏢",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.invoices",
+   "dept_id": "purchases",
+   "tab_index": 2,
+   "name": "فواتير الشراء",
+   "icon": "📄",
+   "initial_tab": "invoices",
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.payments",
+   "dept_id": "purchases",
+   "tab_index": 3,
+   "name": "سندات الصرف",
+   "icon": "📤",
+   "initial_tab": "payment",
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.returns",
+   "dept_id": "purchases",
+   "tab_index": 4,
+   "name": "مردودات المشتريات",
+   "icon": "↩️",
+   "initial_tab": "returns",
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.requests",
+   "dept_id": "purchases",
+   "tab_index": 5,
+   "name": "طلبات وعروض الشراء",
+   "icon": "📨",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.costtypes",
+   "dept_id": "purchases",
+   "tab_index": 6,
+   "name": "أنواع التكاليف والتهيئة",
+   "icon": "💲",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "pur.items",
+   "dept_id": "purchases",
+   "tab_index": 7,
+   "name": "أصناف الموردين",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.shipping",
+   "dept_id": "purchases",
+   "tab_index": 8,
+   "name": "الشحن والاستيراد",
+   "icon": "🚢",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.operations",
+   "dept_id": "purchases",
+   "tab_index": 9,
+   "name": "عمليات متقدمة",
+   "icon": "⚙️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.reports",
+   "dept_id": "purchases",
+   "tab_index": 10,
+   "name": "التقارير والمتغيرات",
+   "icon": "📊",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.charges",
+   "dept_id": "purchases",
+   "tab_index": 11,
+   "name": "أعباء المشتريات",
+   "icon": "🚢",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "pur.localpurchase",
+   "dept_id": "purchases",
+   "tab_index": 12,
+   "name": "فاتورة شراء محلية",
+   "icon": "📄",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "rep.balance",
+   "dept_id": "reports",
+   "tab_index": 0,
+   "name": "الميزانية العمومية",
+   "icon": "📋",
+   "initial_tab": "balance_sheet",
+   "sensitive": false
+  },
+  {
+   "perm_id": "rep.income",
+   "dept_id": "reports",
+   "tab_index": 1,
+   "name": "قائمة الدخل",
+   "icon": "💰",
+   "initial_tab": "income_statement",
+   "sensitive": false
+  },
+  {
+   "perm_id": "rep.cashflow",
+   "dept_id": "reports",
+   "tab_index": 2,
+   "name": "التدفقات النقدية",
+   "icon": "💸",
+   "initial_tab": "cash_flow",
+   "sensitive": false
+  },
+  {
+   "perm_id": "rep.ratios",
+   "dept_id": "reports",
+   "tab_index": 3,
+   "name": "تحليل النسب",
+   "icon": "📐",
+   "initial_tab": "ratios",
+   "sensitive": false
+  },
+  {
+   "perm_id": "ast.list",
+   "dept_id": "assets",
+   "tab_index": 0,
+   "name": "الأصول",
+   "icon": "📋",
+   "initial_tab": "assets",
+   "sensitive": false
+  },
+  {
+   "perm_id": "ast.categories",
+   "dept_id": "assets",
+   "tab_index": 1,
+   "name": "طرق الإهلاك",
+   "icon": "📉",
+   "initial_tab": "categories",
+   "sensitive": false
+  },
+  {
+   "perm_id": "ast.schedule",
+   "dept_id": "assets",
+   "tab_index": 2,
+   "name": "جدول الإهلاك",
+   "icon": "📅",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "ast.disposal",
+   "dept_id": "assets",
+   "tab_index": 3,
+   "name": "التخلص",
+   "icon": "🗑️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "ast.maintenance",
+   "dept_id": "assets",
+   "tab_index": 4,
+   "name": "الصيانة",
+   "icon": "🔧",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "hr.employees",
+   "dept_id": "hr",
+   "tab_index": 0,
+   "name": "الموظفون",
+   "icon": "👤",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "hr.payroll",
+   "dept_id": "hr",
+   "tab_index": 1,
+   "name": "الرواتب",
+   "icon": "💵",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "hr.leaves",
+   "dept_id": "hr",
+   "tab_index": 2,
+   "name": "الإجازات",
+   "icon": "🏖️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "hr.evaluations",
+   "dept_id": "hr",
+   "tab_index": 3,
+   "name": "التقييمات",
+   "icon": "⭐",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "hr.recruitment",
+   "dept_id": "hr",
+   "tab_index": 4,
+   "name": "التوظيف والوثائق",
+   "icon": "📁",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "hr.movements",
+   "dept_id": "hr",
+   "tab_index": 5,
+   "name": "الحركات والخدمات",
+   "icon": "🔄",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "hr.training",
+   "dept_id": "hr",
+   "tab_index": 6,
+   "name": "التدريب والتأهيل",
+   "icon": "🎓",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "hr.settings",
+   "dept_id": "hr",
+   "tab_index": 7,
+   "name": "تهيئة النظام",
+   "icon": "⚙️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "hr.operations",
+   "dept_id": "hr",
+   "tab_index": 8,
+   "name": "العمليات التشغيلية",
+   "icon": "🕐",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.dashboard",
+   "dept_id": "system",
+   "tab_index": 0,
+   "name": "لوحة المعلومات الموحدة",
+   "icon": "📊",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.brain",
+   "dept_id": "system",
+   "tab_index": 1,
+   "name": "العقل المركزي",
+   "icon": "🧠",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.users",
+   "dept_id": "system",
+   "tab_index": 2,
+   "name": "المستخدمون",
+   "icon": "👤",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.groups",
+   "dept_id": "system",
+   "tab_index": 3,
+   "name": "مجموعات المستخدمين",
+   "icon": "👥",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.permissions",
+   "dept_id": "system",
+   "tab_index": 4,
+   "name": "الصلاحيات",
+   "icon": "🔐",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.tabperms",
+   "dept_id": "system",
+   "tab_index": 5,
+   "name": "صلاحيات التبويبات",
+   "icon": "🗂️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.monitor",
+   "dept_id": "system",
+   "tab_index": 6,
+   "name": "مراقبة المستخدمين",
+   "icon": "📡",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.audit",
+   "dept_id": "system",
+   "tab_index": 7,
+   "name": "سجل العمليات",
+   "icon": "🛡️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.annualclose",
+   "dept_id": "system",
+   "tab_index": 8,
+   "name": "الإقفال والفترات",
+   "icon": "📅",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.backup",
+   "dept_id": "system",
+   "tab_index": 9,
+   "name": "النسخ الاحتياطي",
+   "icon": "💾",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.dbmanage",
+   "dept_id": "system",
+   "tab_index": 10,
+   "name": "إدارة قاعدة البيانات",
+   "icon": "🛢️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.suspension",
+   "dept_id": "system",
+   "tab_index": 11,
+   "name": "التوقيف والإيقاف",
+   "icon": "⏸️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.yeartransfer",
+   "dept_id": "system",
+   "tab_index": 12,
+   "name": "نقل البيانات للسنة",
+   "icon": "📤",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.units",
+   "dept_id": "system",
+   "tab_index": 13,
+   "name": "الوحدات والأرشفة",
+   "icon": "🏛️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.signatures",
+   "dept_id": "system",
+   "tab_index": 14,
+   "name": "التواقيعات",
+   "icon": "✍️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.mandatory",
+   "dept_id": "system",
+   "tab_index": 15,
+   "name": "حقول النوافذ والجداول",
+   "icon": "❗",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.templates",
+   "dept_id": "system",
+   "tab_index": 16,
+   "name": "قوالب التقارير",
+   "icon": "📄",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.alerts",
+   "dept_id": "system",
+   "tab_index": 17,
+   "name": "تنبيهات النظام",
+   "icon": "🔔",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.prefs",
+   "dept_id": "system",
+   "tab_index": 18,
+   "name": "خصوصية المستخدم",
+   "icon": "🎨",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.company",
+   "dept_id": "system",
+   "tab_index": 19,
+   "name": "وصف الشركة",
+   "icon": "🏢",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.apikeys",
+   "dept_id": "system",
+   "tab_index": 20,
+   "name": "مفتاح API",
+   "icon": "🔑",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.advanced",
+   "dept_id": "system",
+   "tab_index": 21,
+   "name": "إعدادات متقدمة",
+   "icon": "⚙️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.anomaly",
+   "dept_id": "system",
+   "tab_index": 22,
+   "name": "اكتشاف الشذوذ",
+   "icon": "🚨",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.engineer",
+   "dept_id": "system",
+   "tab_index": 23,
+   "name": "الإعدادات الخاصة",
+   "icon": "🛠️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.deployment",
+   "dept_id": "system",
+   "tab_index": 24,
+   "name": "نمط النشر والتخزين",
+   "icon": "🗄️",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.dailyclose",
+   "dept_id": "system",
+   "tab_index": 25,
+   "name": "الإقفال اليومي",
+   "icon": "📅",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.hierarchy",
+   "dept_id": "system",
+   "tab_index": 26,
+   "name": "إدارة القواعد الهرمية",
+   "icon": "🧭",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.learning",
+   "dept_id": "system",
+   "tab_index": 27,
+   "name": "تعلّم الوكيل",
+   "icon": "🧠",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.metadata",
+   "dept_id": "system",
+   "tab_index": 28,
+   "name": "محركات البيانات الوصفية",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.ai",
+   "dept_id": "system",
+   "tab_index": 29,
+   "name": "إعدادات الذكاء",
+   "icon": "🤖",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s00",
+   "dept_id": "inventory",
+   "tab_index": 0,
+   "name": "الأصناف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s01",
+   "dept_id": "inventory",
+   "tab_index": 1,
+   "name": "المستودعات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s02",
+   "dept_id": "inventory",
+   "tab_index": 2,
+   "name": "حركات المخزون",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s03",
+   "dept_id": "inventory",
+   "tab_index": 3,
+   "name": "الجرد",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s04",
+   "dept_id": "inventory",
+   "tab_index": 4,
+   "name": "المجموعات المخزنية",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s05",
+   "dept_id": "inventory",
+   "tab_index": 5,
+   "name": "ربط الحسابات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s06",
+   "dept_id": "inventory",
+   "tab_index": 6,
+   "name": "الموزنات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s07",
+   "dept_id": "inventory",
+   "tab_index": 7,
+   "name": "QR Code",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s08",
+   "dept_id": "inventory",
+   "tab_index": 8,
+   "name": "الدفعات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s09",
+   "dept_id": "inventory",
+   "tab_index": 9,
+   "name": "الرفوف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s10",
+   "dept_id": "inventory",
+   "tab_index": 10,
+   "name": "مواقع الأصناف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s11",
+   "dept_id": "inventory",
+   "tab_index": 11,
+   "name": "تسعيرة الأصناف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s12",
+   "dept_id": "inventory",
+   "tab_index": 12,
+   "name": "موردو الأصناف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s13",
+   "dept_id": "inventory",
+   "tab_index": 13,
+   "name": "الأرقام التسلسلية",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s14",
+   "dept_id": "inventory",
+   "tab_index": 14,
+   "name": "الباركودات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s15",
+   "dept_id": "inventory",
+   "tab_index": 15,
+   "name": "بيانات الأصناف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s16",
+   "dept_id": "inventory",
+   "tab_index": 16,
+   "name": "دفعات الأصناف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s17",
+   "dept_id": "inventory",
+   "tab_index": 17,
+   "name": "الاستلام المخزني",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s18",
+   "dept_id": "inventory",
+   "tab_index": 18,
+   "name": "أوامر التوريد",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s19",
+   "dept_id": "inventory",
+   "tab_index": 19,
+   "name": "أوامر الصرف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s20",
+   "dept_id": "inventory",
+   "tab_index": 20,
+   "name": "التحويل المخزني",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s21",
+   "dept_id": "inventory",
+   "tab_index": 21,
+   "name": "تسويات المخزون",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s22",
+   "dept_id": "inventory",
+   "tab_index": 22,
+   "name": "عهد الموظف المخزني",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s23",
+   "dept_id": "inventory",
+   "tab_index": 23,
+   "name": "تصفية العهد المخزني",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s24",
+   "dept_id": "inventory",
+   "tab_index": 24,
+   "name": "تحضير الكميات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s25",
+   "dept_id": "inventory",
+   "tab_index": 25,
+   "name": "عمليات الأرقام التسلسلية",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s26",
+   "dept_id": "inventory",
+   "tab_index": 26,
+   "name": "الأمانات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s27",
+   "dept_id": "inventory",
+   "tab_index": 27,
+   "name": "قوالب الأصناف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s28",
+   "dept_id": "inventory",
+   "tab_index": 28,
+   "name": "تحويل لأصل ثابت",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s29",
+   "dept_id": "inventory",
+   "tab_index": 29,
+   "name": "متغيرات المخزن",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s30",
+   "dept_id": "inventory",
+   "tab_index": 30,
+   "name": "وحدات القياس",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s31",
+   "dept_id": "inventory",
+   "tab_index": 31,
+   "name": "أنواع الأصناف",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s32",
+   "dept_id": "inventory",
+   "tab_index": 32,
+   "name": "التهيئة",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s33",
+   "dept_id": "inventory",
+   "tab_index": 33,
+   "name": "التقارير",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s34",
+   "dept_id": "inventory",
+   "tab_index": 34,
+   "name": "معايير التقييم والملحقات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.s35",
+   "dept_id": "inventory",
+   "tab_index": 35,
+   "name": "التنبؤ الاستباقي",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.reserve",
+   "dept_id": "inventory",
+   "tab_index": 36,
+   "name": "حجز الكميات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.auxops",
+   "dept_id": "inventory",
+   "tab_index": 37,
+   "name": "عمليات إضافية",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.transferrecv",
+   "dept_id": "inventory",
+   "tab_index": 38,
+   "name": "استلام التحويل المخزني",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.custodyorders",
+   "dept_id": "inventory",
+   "tab_index": 39,
+   "name": "أوامر الأمانات",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.matrequest",
+   "dept_id": "inventory",
+   "tab_index": 40,
+   "name": "طلب صرف/تحويل مواد",
+   "icon": "📦",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.rules",
+   "dept_id": "finance",
+   "tab_index": 35,
+   "name": "قواعد الترحيل",
+   "icon": "⚙️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.chat",
+   "dept_id": "system",
+   "tab_index": 30,
+   "name": "الدردشة الذكية",
+   "icon": "💬",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.agents",
+   "dept_id": "system",
+   "tab_index": 31,
+   "name": "الوكلاء الذكية",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.sync",
+   "dept_id": "system",
+   "tab_index": 32,
+   "name": "المزامنة والأجهزة",
+   "icon": "🔄",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.tashkeel",
+   "dept_id": "system",
+   "tab_index": 33,
+   "name": "التشكيل العربي",
+   "icon": "✍️",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.memory",
+   "dept_id": "system",
+   "tab_index": 33,
+   "name": "ذاكرة الوكيل",
+   "icon": "🧠",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.budgethub",
+   "dept_id": "finance",
+   "tab_index": 90,
+   "name": "💰 موازنات الإدارة",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.reviewhub",
+   "dept_id": "finance",
+   "tab_index": 91,
+   "name": "📥 بوابة المراجعة والاعتماد",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.closehub",
+   "dept_id": "finance",
+   "tab_index": 92,
+   "name": "🔒 الإقفال المالي الموحّد",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "fin.dimhub",
+   "dept_id": "finance",
+   "tab_index": 93,
+   "name": "🧭 الأبعاد ومراكز التكلفة",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "fin.finhub",
+   "dept_id": "finance",
+   "tab_index": 94,
+   "name": "⚙️ الإعدادات المالية",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.custhub",
+   "dept_id": "sales",
+   "tab_index": 95,
+   "name": "👥 العملاء",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sal.poshub",
+   "dept_id": "sales",
+   "tab_index": 96,
+   "name": "🧾 كونسول نقاط البيع",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.itemhub",
+   "dept_id": "inventory",
+   "tab_index": 97,
+   "name": "📦 تهيئة المخزون والأصناف",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "ast.hub",
+   "dept_id": "assets",
+   "tab_index": 98,
+   "name": "🏭 الأصول والإهلاك",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "hr.hub",
+   "dept_id": "hr",
+   "tab_index": 99,
+   "name": "🧑‍💼 شؤون الموظفين",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.userhub",
+   "dept_id": "system",
+   "tab_index": 100,
+   "name": "🔐 المستخدمون والصلاحيات",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.dbhub",
+   "dept_id": "system",
+   "tab_index": 101,
+   "name": "🗄️ النسخ وقاعدة البيانات",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.advhub",
+   "dept_id": "system",
+   "tab_index": 102,
+   "name": "🛠️ الإعدادات المتقدمة",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "sys.aihub",
+   "dept_id": "system",
+   "tab_index": 103,
+   "name": "🤖 مركز قيادة الذكاء والوكلاء",
+   "icon": "🧩",
+   "initial_tab": null,
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.designsystem",
+   "dept_id": "system",
+   "tab_index": 104,
+   "name": "🎨 نظام التصميم",
+   "icon": "🎨",
+   "initial_tab": null,
+   "sensitive": true
+  },
+  {
+   "perm_id": "pur.supgroups",
+   "dept_id": "purchases",
+   "tab_index": 13,
+   "name": "مجموعات الموردين",
+   "icon": "🏷️",
+   "initial_tab": "supplierGroups",
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.whgroups",
+   "dept_id": "inventory",
+   "tab_index": 98,
+   "name": "مجموعات المخازن",
+   "icon": "🏬",
+   "initial_tab": "warehouseGroups",
+   "sensitive": false
+  },
+  {
+   "perm_id": "inv.transfertypes",
+   "dept_id": "inventory",
+   "tab_index": 99,
+   "name": "أنواع التحويل المخزني",
+   "icon": "🔀",
+   "initial_tab": "transferTypes",
+   "sensitive": false
+  },
+  {
+   "perm_id": "sys.opperms",
+   "dept_id": "system",
+   "tab_index": 105,
+   "name": "صلاحيات العمليات",
+   "icon": "🎛️",
+   "initial_tab": "opPerms",
+   "sensitive": true
+  }
+ ],
+ "sections": [
+  {
+   "id": "fin.sec.journal",
+   "dept_id": "finance",
+   "name": "القيود اليومية",
+   "pinned": true,
+   "order": 1.0,
+   "screens": [
+    "fin.journal"
+   ]
+  },
+  {
+   "id": "fin.sec.vouchers",
+   "dept_id": "finance",
+   "name": "السندات",
+   "pinned": true,
+   "order": 2.0,
+   "screens": [
+    "fin.vouchers"
+   ]
+  },
+  {
+   "id": "fin.sec.coa",
+   "dept_id": "finance",
+   "name": "دليل الحسابات",
+   "pinned": true,
+   "order": 3.0,
+   "screens": [
+    "fin.coa"
+   ]
+  },
+  {
+   "id": "fin.sec.intermediate",
+   "dept_id": "finance",
+   "name": "الحسابات الوسيطة",
+   "pinned": true,
+   "order": 3.5,
+   "screens": [
+    "fin.intermediate"
+   ]
+  },
+  {
+   "id": "fin.sec.trial",
+   "dept_id": "finance",
+   "name": "ميزان المراجعة",
+   "pinned": true,
+   "order": 4.0,
+   "screens": [
+    "fin.trial"
+   ]
+  },
+  {
+   "id": "fin.sec.ledger",
+   "dept_id": "finance",
+   "name": "دفتر الأستاذ",
+   "pinned": true,
+   "order": 5.0,
+   "screens": [
+    "fin.ledger"
+   ]
+  },
+  {
+   "id": "fin.sec.bankrec",
+   "dept_id": "finance",
+   "name": "التسوية البنكية",
+   "pinned": true,
+   "order": 6.0,
+   "screens": [
+    "fin.bankrec"
+   ]
+  },
+  {
+   "id": "fin.sec.reports",
+   "dept_id": "finance",
+   "name": "التقارير المالية",
+   "pinned": true,
+   "order": 7.0,
+   "screens": [
+    "fin.reports"
+   ]
+  },
+  {
+   "id": "fin.sec.opening",
+   "dept_id": "finance",
+   "name": "الأرصدة الافتتاحية",
+   "pinned": false,
+   "order": 20.0,
+   "screens": [
+    "fin.opening"
+   ]
+  },
+  {
+   "id": "fin.sec.cash",
+   "dept_id": "finance",
+   "name": "النقد والبنوك",
+   "pinned": false,
+   "order": 21.0,
+   "screens": [
+    "fin.cashboxes",
+    "fin.banks",
+    "fin.fx",
+    "fin.cheques",
+    "sys.dailyclose"
+   ]
+  },
+  {
+   "id": "fin.sec.adjust",
+   "dept_id": "finance",
+   "name": "التسويات",
+   "pinned": false,
+   "order": 22.0,
+   "screens": [
+    "fin.adjustments",
+    "fin.notes"
+   ]
+  },
+  {
+   "id": "fin.sec.tax",
+   "dept_id": "finance",
+   "name": "الضرائب",
+   "pinned": false,
+   "order": 23.0,
+   "screens": [
+    "fin.taxes",
+    "fin.taxreturns"
+   ]
+  },
+  {
+   "id": "fin.sec.review",
+   "dept_id": "finance",
+   "name": "المراجعة والاعتماد",
+   "pinned": false,
+   "order": 24.0,
+   "screens": [
+    "fin.requests",
+    "fin.docreview",
+    "fin.journalreview",
+    "fin.reviewhub"
+   ]
+  },
+  {
+   "id": "fin.sec.closing",
+   "dept_id": "finance",
+   "name": "الإقفال والفترات",
+   "pinned": false,
+   "order": 25.0,
+   "screens": [
+    "fin.periods",
+    "fin.closing",
+    "sys.annualclose",
+    "sys.yeartransfer",
+    "fin.closehub"
+   ]
+  },
+  {
+   "id": "fin.sec.dimensions",
+   "dept_id": "finance",
+   "name": "الأبعاد التحليلية",
+   "pinned": false,
+   "order": 26.0,
+   "screens": [
+    "fin.costcenters",
+    "fin.dimensions",
+    "fin.dimhub"
+   ]
+  },
+  {
+   "id": "fin.sec.settings",
+   "dept_id": "finance",
+   "name": "الإعدادات المحاسبية",
+   "pinned": false,
+   "order": 27.0,
+   "screens": [
+    "fin.currencies",
+    "fin.ledgersettings",
+    "fin.orgstructure",
+    "fin.setup",
+    "fin.numbering",
+    "fin.branches",
+    "fin.zakathaul",
+    "fin.finhub"
+   ]
+  },
+  {
+   "id": "fin.sec.budget",
+   "dept_id": "finance",
+   "name": "الموازنة",
+   "pinned": false,
+   "order": 27.5,
+   "screens": [
+    "sal.budget",
+    "sal.budgetext",
+    "fin.budgethub"
+   ]
+  },
+  {
+   "id": "fin.sec.plans",
+   "dept_id": "finance",
+   "name": "المخططات والعمولات",
+   "pinned": false,
+   "order": 28.0,
+   "screens": [
+    "fin.plans"
+   ]
+  },
+  {
+   "id": "fin.sec.scanner",
+   "dept_id": "finance",
+   "name": "قراءة الفواتير المصورة",
+   "pinned": false,
+   "order": 29.0,
+   "screens": [
+    "fin.scanner"
+   ]
+  },
+  {
+   "id": "sys.sec.dashboard",
+   "dept_id": "system",
+   "name": "لوحة المعلومات الموحدة",
+   "pinned": false,
+   "order": 1.0,
+   "screens": [
+    "sys.dashboard"
+   ]
+  },
+  {
+   "id": "sys.sec.brain",
+   "dept_id": "system",
+   "name": "العقل المركزي",
+   "pinned": false,
+   "order": 2.0,
+   "screens": [
+    "sys.brain"
+   ]
+  },
+  {
+   "id": "sys.sec.users",
+   "dept_id": "system",
+   "name": "المستخدمون والصلاحيات",
+   "pinned": false,
+   "order": 3.0,
+   "screens": [
+    "sys.users",
+    "sys.groups",
+    "sys.permissions",
+    "sys.tabperms",
+    "sys.userhub",
+    "sys.designsystem"
+   ]
+  },
+  {
+   "id": "sys.sec.audit",
+   "dept_id": "system",
+   "name": "التدقيق والمراقبة",
+   "pinned": false,
+   "order": 4.0,
+   "screens": [
+    "sys.monitor",
+    "sys.audit"
+   ]
+  },
+  {
+   "id": "sys.sec.backup",
+   "dept_id": "system",
+   "name": "النسخ الاحتياطي",
+   "pinned": false,
+   "order": 5.0,
+   "screens": [
+    "sys.backup",
+    "sys.dbhub"
+   ]
+  },
+  {
+   "id": "sys.sec.db",
+   "dept_id": "system",
+   "name": "إدارة قاعدة البيانات",
+   "pinned": false,
+   "order": 6.0,
+   "screens": [
+    "sys.dbmanage"
+   ]
+  },
+  {
+   "id": "sys.sec.suspension",
+   "dept_id": "system",
+   "name": "التوقيف والإيقاف",
+   "pinned": false,
+   "order": 7.0,
+   "screens": [
+    "sys.suspension"
+   ]
+  },
+  {
+   "id": "sys.sec.units",
+   "dept_id": "system",
+   "name": "الوحدات والأرشفة",
+   "pinned": false,
+   "order": 8.0,
+   "screens": [
+    "sys.units"
+   ]
+  },
+  {
+   "id": "sys.sec.signatures",
+   "dept_id": "system",
+   "name": "التواقيعات",
+   "pinned": false,
+   "order": 9.0,
+   "screens": [
+    "sys.signatures"
+   ]
+  },
+  {
+   "id": "sys.sec.mandatory",
+   "dept_id": "system",
+   "name": "حقول النوافذ والجداول",
+   "pinned": false,
+   "order": 10.0,
+   "screens": [
+    "sys.mandatory"
+   ]
+  },
+  {
+   "id": "sys.sec.templates",
+   "dept_id": "system",
+   "name": "قوالب التقارير",
+   "pinned": false,
+   "order": 11.0,
+   "screens": [
+    "sys.templates"
+   ]
+  },
+  {
+   "id": "sys.sec.alerts",
+   "dept_id": "system",
+   "name": "تنبيهات النظام",
+   "pinned": false,
+   "order": 12.0,
+   "screens": [
+    "sys.alerts"
+   ]
+  },
+  {
+   "id": "sys.sec.prefs",
+   "dept_id": "system",
+   "name": "خصوصية المستخدم",
+   "pinned": false,
+   "order": 13.0,
+   "screens": [
+    "sys.prefs"
+   ]
+  },
+  {
+   "id": "sys.sec.company",
+   "dept_id": "system",
+   "name": "وصف الشركة",
+   "pinned": false,
+   "order": 14.0,
+   "screens": [
+    "sys.company"
+   ]
+  },
+  {
+   "id": "sys.sec.advanced",
+   "dept_id": "system",
+   "name": "إعدادات متقدمة",
+   "pinned": false,
+   "order": 16.0,
+   "screens": [
+    "sys.advanced",
+    "sys.hierarchy",
+    "sys.metadata",
+    "sys.advhub"
+   ]
+  },
+  {
+   "id": "sys.sec.anomaly",
+   "dept_id": "system",
+   "name": "اكتشاف الشذوذ",
+   "pinned": false,
+   "order": 17.0,
+   "screens": [
+    "sys.anomaly"
+   ]
+  },
+  {
+   "id": "sys.sec.engineer",
+   "dept_id": "system",
+   "name": "الإعدادات الخاصة",
+   "pinned": false,
+   "order": 18.0,
+   "screens": [
+    "sys.engineer"
+   ]
+  },
+  {
+   "id": "sys.sec.deployment",
+   "dept_id": "system",
+   "name": "نمط النشر والتخزين",
+   "pinned": false,
+   "order": 19.0,
+   "screens": [
+    "sys.deployment"
+   ]
+  },
+  {
+   "id": "sys.sec.ai",
+   "dept_id": "system",
+   "name": "الذكاء والأتمتة",
+   "pinned": false,
+   "order": 20.0,
+   "screens": [
+    "sys.ai",
+    "sys.apikeys",
+    "sys.learning",
+    "sys.chat",
+    "sys.agents",
+    "sys.tashkeel",
+    "sys.memory",
+    "sys.aihub"
+   ]
+  },
+  {
+   "id": "fin.sec.rules",
+   "dept_id": "finance",
+   "name": "قواعد الترحيل",
+   "pinned": false,
+   "order": 30.0,
+   "screens": [
+    "fin.rules"
+   ]
+  },
+  {
+   "id": "sys.sec.sync",
+   "dept_id": "system",
+   "name": "المزامنة والأجهزة",
+   "pinned": false,
+   "order": 21.0,
+   "screens": [
+    "sys.sync"
+   ]
+  }
+ ],
+ "departments": [
+  {
+   "id": "finance",
+   "name": "المالية",
+   "sub": "القيود والترحيل وميزان المراجعة",
+   "icon": "finance.avif",
+   "chips": [
+    {
+     "label": "قيود وترحيل",
+     "kind": null
+    },
+    {
+     "label": "ميزان المراجعة",
+     "kind": "ok"
+    }
+   ],
+   "tabs": [
+    "دليل الحسابات",
+    "القيود اليومية",
+    "دفتر الأستاذ",
+    "ميزان المراجعة",
+    "السندات",
+    "الأرصدة الافتتاحية",
+    "الصناديق",
+    "البنوك",
+    "صرف العملة",
+    "التسويات",
+    "التسوية البنكية",
+    "العملات",
+    "مراكز التكلفة",
+    "الإقفالات",
+    "التقارير المالية",
+    "متغيرات الأستاذ",
+    "الهيكل الإداري",
+    "الحسابات الوسيطة",
+    "طلبات القيود والسندات",
+    "الشيكات المستحقة",
+    "مراجعة الوثائق",
+    "الفروع والمجموعات",
+    "المخططات والعمولات",
+    "بيانات الدول",
+    "الفترات",
+    "قراءة الفواتير المصورة",
+    "الضرائب والرسوم",
+    "الأبعاد التحليلية",
+    "ترقيم المستندات",
+    "الإقرارات الضريبية",
+    "الإشعارات المدينة والدائنة",
+    "مراجعة وترحيل القيود",
+    "دورة استحقاق الزكاة",
+    "الموازنة",
+    "تعديل الموازنة"
+   ]
+  },
+  {
+   "id": "sales",
+   "name": "المبيعات",
+   "sub": "الفواتير والعملاء والتحصيل",
+   "icon": "sales.avif",
+   "chips": [
+    {
+     "label": "فواتير وعملاء",
+     "kind": null
+    },
+    {
+     "label": "تحصيل",
+     "kind": "ok"
+    }
+   ],
+   "tabs": [
+    "الفواتير",
+    "العملاء",
+    "مجموعات العملاء",
+    "المندوبون",
+    "المحصلون والبطاقات",
+    "نقطة البيع",
+    "تصفية الكاشيرات",
+    "عمليات POS متقدمة",
+    "العمولات",
+    "أجهزة POS",
+    "تقارير نقاط البيع",
+    "متغيرات العميل",
+    "عروض الأسعار",
+    "المردودات",
+    "طلبات العملاء",
+    "أنواع المبيعات",
+    "عمليات متقدمة",
+    "تهيئة كاملة",
+    "أعمار الديون والترميزات",
+    "التقارير"
+   ]
+  },
+  {
+   "id": "purchases",
+   "name": "المشتريات",
+   "sub": "أوامر الشراء والموردون والمدفوعات",
+   "icon": "purchases.avif",
+   "chips": [
+    {
+     "label": "أوامر وموردون",
+     "kind": null
+    },
+    {
+     "label": "مدفوعات",
+     "kind": "ok"
+    }
+   ],
+   "tabs": [
+    "أوامر الشراء",
+    "الموردون",
+    "فواتير الشراء",
+    "سندات الصرف",
+    "مردودات المشتريات",
+    "طلبات وعروض الشراء",
+    "أنواع التكاليف والتهيئة",
+    "أصناف الموردين",
+    "الشحن والاستيراد",
+    "عمليات متقدمة",
+    "التقارير والمتغيرات",
+    "أعباء المشتريات",
+    "فاتورة شراء محلية"
+   ]
+  },
+  {
+   "id": "inventory",
+   "name": "المخزون",
+   "sub": "الأصناف والمستودعات والقيمة",
+   "icon": "inventory.avif",
+   "chips": [
+    {
+     "label": "أصناف ومستودعات",
+     "kind": null
+    },
+    {
+     "label": "جرد وحركة",
+     "kind": "ok"
+    }
+   ],
+   "tabs": [
+    "الأصناف",
+    "المستودعات",
+    "حركات المخزون",
+    "الجرد",
+    "المجموعات المخزنية",
+    "ربط الحسابات",
+    "الموزنات",
+    "QR Code",
+    "الدفعات",
+    "الرفوف",
+    "مواقع الأصناف",
+    "تسعيرة الأصناف",
+    "موردو الأصناف",
+    "الأرقام التسلسلية",
+    "الباركودات",
+    "بيانات الأصناف",
+    "دفعات الأصناف",
+    "الاستلام المخزني",
+    "أوامر التوريد",
+    "أوامر الصرف",
+    "التحويل المخزني",
+    "تسويات المخزون",
+    "عهد الموظف المخزني",
+    "تصفية العهد المخزني",
+    "تحضير الكميات",
+    "عمليات الأرقام التسلسلية",
+    "الأمانات",
+    "قوالب الأصناف",
+    "تحويل لأصل ثابت",
+    "متغيرات المخزن",
+    "وحدات القياس",
+    "أنواع الأصناف",
+    "التهيئة",
+    "التقارير",
+    "معايير التقييم والملحقات",
+    "التنبؤ الاستباقي",
+    "حجز الكميات",
+    "عمليات إضافية",
+    "استلام التحويل المخزني",
+    "أوامر الأمانات",
+    "طلب صرف/تحويل مواد"
+   ]
+  },
+  {
+   "id": "reports",
+   "name": "التقارير المالية",
+   "sub": "القوائم المالية والتحليل",
+   "icon": "reports.avif",
+   "chips": [
+    {
+     "label": "قوائم مالية",
+     "kind": null
+    },
+    {
+     "label": "تحليل",
+     "kind": "gold"
+    }
+   ],
+   "tabs": [
+    "الميزانية العمومية",
+    "قائمة الدخل",
+    "التدفقات النقدية",
+    "تحليل النسب"
+   ]
+  },
+  {
+   "id": "assets",
+   "name": "الأصول الثابتة",
+   "sub": "التقييم والإهلاك والمتابعة",
+   "icon": "assets.avif",
+   "chips": [
+    {
+     "label": "أصول وإهلاك",
+     "kind": null
+    },
+    {
+     "label": "متابعة",
+     "kind": "ok"
+    }
+   ],
+   "tabs": [
+    "الأصول",
+    "طرق الإهلاك",
+    "جدول الإهلاك",
+    "التخلص",
+    "الصيانة"
+   ]
+  },
+  {
+   "id": "hr",
+   "name": "الموارد البشرية",
+   "sub": "الموظفون والرواتب والإجازات",
+   "icon": "hr.avif",
+   "chips": [
+    {
+     "label": "موظفون ورواتب",
+     "kind": null
+    },
+    {
+     "label": "إجازات",
+     "kind": "gold"
+    }
+   ],
+   "tabs": [
+    "الموظفون",
+    "الرواتب",
+    "الإجازات",
+    "التقييمات",
+    "التوظيف والوثائق",
+    "الحركات والخدمات",
+    "التدريب والتأهيل",
+    "تهيئة النظام",
+    "العمليات التشغيلية"
+   ]
+  },
+  {
+   "id": "system",
+   "name": "إدارة النظام",
+   "sub": "المستخدمون والصلاحيات والإعدادات",
+   "icon": "system.avif",
+   "chips": [
+    {
+     "label": "مستخدمون",
+     "kind": null
+    },
+    {
+     "label": "صلاحيات",
+     "kind": "ok"
+    }
+   ],
+   "tabs": [
+    "لوحة المعلومات الموحدة",
+    "العقل المركزي",
+    "المستخدمون",
+    "مجموعات المستخدمين",
+    "الصلاحيات",
+    "صلاحيات التبويبات",
+    "مراقبة المستخدمين",
+    "سجل العمليات",
+    "الإقفال والفترات",
+    "النسخ الاحتياطي",
+    "إدارة قاعدة البيانات",
+    "التوقيف والإيقاف",
+    "نقل البيانات للسنة",
+    "الوحدات والأرشفة",
+    "التواقيعات",
+    "حقول النوافذ والجداول",
+    "قوالب التقارير",
+    "تنبيهات النظام",
+    "خصوصية المستخدم",
+    "وصف الشركة",
+    "مفتاح API",
+    "إعدادات متقدمة",
+    "اكتشاف الشذوذ",
+    "الإعدادات الخاصة",
+    "نمط النشر والتخزين",
+    "الإقفال اليومي",
+    "إدارة القواعد الهرمية",
+    "تعلّم الوكيل",
+    "محركات البيانات الوصفية",
+    "إعدادات الذكاء",
+    "ذاكرة الوكيل"
+   ]
+  }
+ ]
+}

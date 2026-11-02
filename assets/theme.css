@@ -1,0 +1,611 @@
+/* ============================================================================
+   طبقة الهوية البصرية v2 — «المحاسب الذكي»
+   مبادئ: زوايا ناعمة (لا حواف حادة) · عمق حقيقي بظلال متعدّدة الطبقات ·
+   لوحة لونية دافئة (تربة/حجر) مع لمسات أخضر مزرق — بلا كحلي ولا أزرق داكن.
+   تُحمَّل بعد style.css فتُهيمن على المتغيّرات القديمة دون لمس المنطق.
+   ========================================================================== */
+:root {
+  /* سطوح دافئة */
+  --paper: #f6f3ee;
+  --paper-2: #efe9e1;
+  --surface: #fffdfa;
+  --surface-2: #faf7f2;
+  --surface-3: #f3eee7;
+
+  /* حبر */
+  --ink: #221f1b;
+  --ink-2: #4a443c;
+  --ink-3: #7d7469;
+  --line: #e3dbd0;
+  --line-strong: #d3c8b9;
+
+  /* لون الهوية: أخضر مزرق هادئ + نحاسي للتنبيه */
+  --brand: #0f766e;
+  --brand-2: #14897f;
+  --brand-ink: #063f3a;
+  --brand-soft: #e6f4f1;
+  --accent: #b45309;
+  --accent-soft: #fdf1e3;
+  --ok: #15803d;
+  --ok-soft: #e8f6ec;
+  --danger: #b42318;
+  --danger-soft: #fdeceb;
+
+  /* استدارة */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  /* ظلال متعدّدة الطبقات — العمق يُبنى لا يُرسم */
+  --sh-1: 0 1px 2px rgba(34, 31, 27, 0.06), 0 1px 1px rgba(34, 31, 27, 0.04);
+  --sh-2: 0 2px 4px rgba(34, 31, 27, 0.06), 0 6px 16px rgba(34, 31, 27, 0.07);
+  --sh-3: 0 4px 8px rgba(34, 31, 27, 0.07), 0 14px 34px rgba(34, 31, 27, 0.10);
+  --sh-4: 0 10px 24px rgba(34, 31, 27, 0.10), 0 30px 70px rgba(34, 31, 27, 0.16);
+  --ring: 0 0 0 3px rgba(15, 118, 110, 0.18);
+}
+
+/* ---------- الأساس ---------- */
+html, body {
+  background:
+    radial-gradient(1200px 600px at 100% -10%, #fbf8f3 0%, transparent 60%),
+    radial-gradient(900px 500px at 0% 110%, #eef3f0 0%, transparent 55%),
+    var(--paper) !important;
+  color: var(--ink) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- البطاقات والأسطح ---------- */
+.card, .panel, .box, .widget, .dept-card, .tile, .stat, .kpi,
+.app-shell section, .workspace > section {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r-lg) !important;
+  box-shadow: var(--sh-2) !important;
+  transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+}
+.card:hover, .dept-card:hover, .tile:hover, .stat:hover, .kpi:hover {
+  box-shadow: var(--sh-3) !important;
+  transform: translateY(-2px);
+  border-color: var(--line-strong) !important;
+}
+
+/* ---------- العناوين ---------- */
+h1, h2, h3, h4, .section-title, .panel-title {
+  color: var(--ink) !important;
+  letter-spacing: -0.01em;
+  font-weight: 800 !important;
+}
+h1 { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7); }
+h2, h3 { position: relative; padding-bottom: 0.45rem; }
+h2::after, h3::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  height: 3px;
+  width: 46px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(90deg, var(--brand), var(--brand-2) 60%, transparent);
+}
+
+/* ---------- الأزرار ---------- */
+button, .btn, input[type="submit"] {
+  border-radius: var(--r-pill) !important;
+  border: 1px solid var(--line-strong) !important;
+  background: linear-gradient(180deg, #ffffff, var(--surface-2)) !important;
+  color: var(--ink) !important;
+  box-shadow: var(--sh-1) !important;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+button:hover, .btn:hover { box-shadow: var(--sh-2) !important; transform: translateY(-1px); }
+button:active, .btn:active { transform: translateY(0); box-shadow: inset 0 2px 4px rgba(34,31,27,0.10) !important; }
+button:focus-visible, .btn:focus-visible, input:focus-visible, select:focus-visible {
+  outline: none !important;
+  box-shadow: var(--ring) !important;
+}
+.fp-primary, button.fp-primary, .btn-primary {
+  background: linear-gradient(180deg, var(--brand-2), var(--brand)) !important;
+  color: #fff !important;
+  border-color: var(--brand-ink) !important;
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.30), 0 10px 24px rgba(15, 118, 110, 0.18) !important;
+}
+.fp-primary:hover { filter: brightness(1.06); }
+
+/* ---------- الحقول: حواف ناعمة وعمق داخلي ---------- */
+input, select, textarea, .input, .select {
+  border-radius: var(--r-sm) !important;
+  border: 1px solid var(--line-strong) !important;
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  box-shadow: inset 0 1px 2px rgba(34, 31, 27, 0.05) !important;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+  padding-block: 0.55rem;
+}
+input:hover, select:hover, textarea:hover { border-color: var(--brand-2) !important; }
+
+/* ---------- التبويبات: حبّات ناعمة بدل أشرطة حادّة ---------- */
+.fp-tabs {
+  gap: 6px !important;
+  padding: 8px 10px !important;
+  background: linear-gradient(180deg, var(--surface-2), var(--surface-3)) !important;
+  border-bottom: 1px solid var(--line) !important;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.8);
+}
+.fp-tabs button,
+.nav button, .tabs button, .nav-item {
+  border-radius: var(--r-pill) !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--ink-2) !important;
+  padding: 6px 14px !important;
+  font-weight: 600 !important;
+  white-space: nowrap;
+}
+.fp-tabs button:hover, .nav button:hover, .tabs button:hover {
+  background: var(--surface) !important;
+  border-color: var(--line) !important;
+  box-shadow: var(--sh-1) !important;
+}
+.fp-tabs button.active,
+.nav button.active, .tabs button.active, .nav-item.active {
+  background: linear-gradient(180deg, var(--brand-2), var(--brand)) !important;
+  color: #fff !important;
+  border-color: var(--brand-ink) !important;
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.28), 0 8px 18px rgba(15, 118, 110, 0.16) !important;
+}
+
+/* ---------- الجداول: صفوف ناعمة قابلة للقراءة ---------- */
+.fp-table-wrap, table {
+  border-radius: var(--r-md) !important;
+  overflow: hidden;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--sh-1) !important;
+  background: var(--surface) !important;
+}
+.fp-table th, table thead th {
+  background: linear-gradient(180deg, #f7f2ea, #efe8dd) !important;
+  color: var(--ink) !important;
+  font-weight: 800 !important;
+  border-bottom: 1px solid var(--line-strong) !important;
+  padding: 12px 10px !important;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.fp-table td, table tbody td {
+  border-bottom: 1px solid var(--line) !important;
+  padding: 11px 10px !important;
+  color: var(--ink-2) !important;
+}
+.fp-table tbody tr:nth-child(even) td, table tbody tr:nth-child(even) td {
+  background: var(--surface-2) !important;
+}
+.fp-table tbody tr:hover td, table tbody tr:hover td {
+  background: var(--brand-soft) !important;
+  color: var(--ink) !important;
+}
+
+/* ---------- الشارات والحالات ---------- */
+.fp-badge, .badge {
+  border-radius: var(--r-pill) !important;
+  background: var(--surface-3) !important;
+  color: var(--ink-2) !important;
+  border: 1px solid var(--line) !important;
+  padding: 2px 10px !important;
+  box-shadow: var(--sh-1);
+}
+.fp-ok { color: var(--ok) !important; background: var(--ok-soft); border-radius: var(--r-pill); padding: 2px 10px; }
+.fp-error, .fp-note.fp-error { color: var(--danger) !important; background: var(--danger-soft); border-radius: var(--r-sm); padding: 8px 12px; }
+
+/* ---------- النافذة المنبثقة (المالية المتقدمة) ---------- */
+.fp-overlay { backdrop-filter: blur(6px) saturate(1.1); background: rgba(34, 31, 27, 0.42) !important; }
+.fp-dialog {
+  border-radius: var(--r-lg) !important;
+  border: 1px solid var(--line) !important;
+  background: var(--surface) !important;
+  box-shadow: var(--sh-4) !important;
+  overflow: hidden;
+}
+.fp-head {
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%) !important;
+  border-bottom: 1px solid var(--line) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9), var(--sh-1);
+}
+.fp-head h2 { font-size: 1.05rem; }
+.fp-head h2::after { display: none; }
+.fp-close {
+  border-radius: var(--r-pill) !important;
+  width: 34px; height: 34px;
+  background: var(--surface-3) !important;
+  box-shadow: var(--sh-1) !important;
+  border: 1px solid var(--line) !important;
+}
+.fp-body { background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%); }
+.fp-form {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r-md) !important;
+  box-shadow: var(--sh-2) !important;
+  padding: 18px !important;
+}
+.fp-grid { gap: 12px 16px !important; }
+.fp-grid label { color: var(--ink-2) !important; font-weight: 600; }
+.fp-note { color: var(--ink-3) !important; }
+.fp-empty {
+  border: 1px dashed var(--line-strong) !important;
+  border-radius: var(--r-md) !important;
+  background: var(--surface-2) !important;
+  color: var(--ink-3) !important;
+  padding: 18px !important;
+}
+
+/* ---------- الشريط العلوي ---------- */
+header, .topbar {
+  background: linear-gradient(180deg, rgba(255, 253, 250, 0.96), rgba(250, 247, 242, 0.96)) !important;
+  border-bottom: 1px solid var(--line) !important;
+  box-shadow: var(--sh-1);
+  backdrop-filter: blur(10px);
+}
+
+/* ---------- بطاقات الإدارات: عمق أوضح ---------- */
+.dept-card, .tile {
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-2) 100%) !important;
+}
+.dept-card img, .tile img { border-radius: var(--r-md) !important; }
+
+/* ---------- تمرير ناعم ---------- */
+* { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: var(--r-pill);
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+/* ============================================================================
+   v3 — حاوية التنقل · دمج لوحة المالية · عمق بطاقات الإدارات
+   ========================================================================== */
+
+/* حاوية صغيرة موحّدة لعناصر التنقل العلوي */
+.main-nav .nav-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, #ffffff, var(--surface-3));
+  box-shadow: var(--sh-2), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.main-nav .nav-group .nav-item {
+  border-radius: var(--r-pill) !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 7px 15px !important;
+  color: var(--ink-2) !important;
+}
+.main-nav .nav-group .nav-item:hover {
+  background: var(--surface) !important;
+  box-shadow: var(--sh-1) !important;
+}
+.main-nav .nav-group .nav-item.active {
+  background: linear-gradient(180deg, var(--brand-2), var(--brand)) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(15, 118, 110, 0.30), 0 10px 20px rgba(15, 118, 110, 0.18) !important;
+}
+
+/* لوحة المالية المدمجة داخل شاشة المالية الأصلية */
+.finance-hub {
+  margin: 14px 0 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--sh-2);
+  overflow: hidden;
+}
+.finance-hub:empty { display: none; }
+.finance-hub .fp-tabs { border-bottom: 1px solid var(--line); }
+.finance-hub .fp-body { padding: 16px; background: linear-gradient(180deg, var(--surface), var(--surface-2)); }
+
+/* النافذة المنبثقة القديمة لم تعد تُستخدم */
+.fp-overlay { display: none !important; }
+
+/* بطاقات الإدارات: عمق وارتفاع وهواء بينها */
+.detail-cards, .catalog-grid, .cards-grid { gap: 12px !important; }
+.department-card, .detail-card.catalog-card {
+  border-radius: 20px !important;
+  border: 1px solid var(--line) !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-2) 100%) !important;
+  box-shadow: 0 6px 14px rgba(34, 31, 27, 0.10), 0 20px 38px rgba(34, 31, 27, 0.10) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.department-card:hover, .detail-card.catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 22px rgba(34, 31, 27, 0.14), 0 32px 64px rgba(34, 31, 27, 0.16) !important;
+}
+
+/* ============================================================================
+   v4 — خلفية سماوية فاتحة · حقول التاريخ LTR · محادثة مثبّتة قابلة للتصغير
+   ========================================================================== */
+:root {
+  --paper: #eaf4fb;        /* سماوي فاتح يكسّر بياض الشاشة القوي */
+  --paper-2: #e2eef8;
+  --surface: #ffffff;
+  --surface-2: #f7fbfe;
+  --surface-3: #eef6fc;
+}
+html, body {
+  background:
+    radial-gradient(1100px 520px at 100% -10%, #f3f9fe 0%, transparent 62%),
+    radial-gradient(900px 480px at 0% 108%, #e6f1fa 0%, transparent 58%),
+    var(--paper) !important;
+}
+.card, .panel, .box, .widget, .dept-card, .tile, .stat, .kpi,
+.app-shell section, .workspace > section {
+  background: var(--surface) !important;
+}
+
+/* حقول التاريخ والوقت: اتجاه لاتيني إجباري حتى لا تنعكس الكتابة داخل RTL */
+input[type="date"], input[type="time"], input[type="datetime-local"],
+input[type="month"], input[type="week"] {
+  direction: ltr !important;
+  text-align: left;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  padding-inline-start: 10px;
+}
+input[type="date"]::-webkit-datetime-edit {
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+}
+
+/* لوحة المحادثة: مثبّتة لا تتحرك مع التمرير + قابلة للتصغير إلى أيقونة */
+.assistant-panel {
+  position: fixed !important;
+  inset-inline-end: 18px;
+  bottom: 18px;
+  top: auto !important;
+  max-height: min(70vh, 620px);
+  width: 350px;
+  border-radius: var(--r-lg) !important;
+  border: 1px solid var(--line) !important;
+  background: var(--surface) !important;
+  box-shadow: var(--sh-4) !important;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.22s ease, height 0.22s ease, border-radius 0.22s ease;
+}
+.assistant-panel .chat-area { overflow-y: auto; }
+body.assistant-collapsed .assistant-panel {
+  width: 58px;
+  max-height: 58px;
+  height: 58px;
+  border-radius: var(--r-pill) !important;
+  cursor: pointer;
+}
+body.assistant-collapsed .assistant-panel .chat-area,
+body.assistant-collapsed .assistant-panel .assistant-status,
+body.assistant-collapsed .assistant-panel .assistant-head h2,
+body.assistant-collapsed .assistant-panel .assistant-head p,
+body.assistant-collapsed .assistant-panel .assistant-resize-width { display: none !important; }
+body.assistant-collapsed .assistant-panel .assistant-head {
+  border: 0;
+  padding: 0;
+  height: 58px;
+  justify-content: center;
+}
+body.assistant-collapsed .assistant-panel .assistant-controls { display: none !important; }
+body.assistant-collapsed .assistant-panel .assistant-mark {
+  margin: 0;
+  width: 42px; height: 42px;
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.35);
+}
+#assistant-dock-toggle {
+  position: fixed;
+  inset-inline-end: 18px;
+  bottom: 18px;
+  width: 58px; height: 58px;
+  border-radius: var(--r-pill) !important;
+  display: none;
+  align-items: center; justify-content: center;
+  font-size: 22px; color: #fff;
+  background: linear-gradient(180deg, var(--brand-2), var(--brand)) !important;
+  box-shadow: 0 8px 22px rgba(15, 118, 110, 0.35) !important;
+  z-index: 61;
+}
+body.assistant-collapsed #assistant-dock-toggle { display: flex; }
+@media (max-width: 820px) {
+  .assistant-panel { width: min(92vw, 350px); }
+}
+
+/* بطاقات ملخص حيّة */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin: 4px 0 16px;
+}
+.kpi-card {
+  background: linear-gradient(180deg, #ffffff, var(--surface-3));
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-2);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.kpi-card:hover { transform: translateY(-3px); box-shadow: var(--sh-3); }
+.kpi-card span { color: var(--ink-3); font-size: .8rem; font-weight: 600; }
+.kpi-card strong { color: var(--brand-ink); font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+.kpi-card small { color: var(--ink-3); font-size: .72rem; }
+
+/* ============================================================================
+   v5 — خلفية رمادية فاتحة للحاويات · حقول تاريخ LTR في كل الشاشات ·
+        بطاقات للنصوص العائمة · إخفاء نصوص الحالة
+   ========================================================================== */
+:root {
+  --paper: #f2f3f5;      /* رمادي فاتح مريح بدل الأبيض الناصع */
+  --paper-2: #eceef1;
+  --surface: #ffffff;    /* البطاقات تبقى بيضاء لتبرز على الرمادي */
+  --surface-2: #f7f8fa;
+  --surface-3: #eef0f3;
+  --line: #dcdfe4;
+  --line-strong: #c9ced6;
+}
+html, body {
+  background:
+    radial-gradient(1100px 520px at 100% -10%, #f7f8fa 0%, transparent 62%),
+    radial-gradient(900px 480px at 0% 108%, #e9ecf0 0%, transparent 58%),
+    var(--paper) !important;
+}
+
+/* الحاويات الرئيسية: رمادي فاتح */
+.app-shell, .workspace, main.layout, .finance-workbench, .fp-dialog, .fp-body {
+  background: var(--paper) !important;
+}
+.workspace > section:not(.kpi-row), .finance-hub {
+  background: var(--paper) !important;
+  border-color: var(--line) !important;
+}
+.panel, .card, .kpi-card, .fp-form, .fp-table-wrap, table, .assistant-panel {
+  background: var(--surface) !important;
+}
+
+/* حقول التاريخ في كل الشاشات بلا استثناء */
+input[type="date"], input[type="datetime-local"], input[type="month"],
+input[type="week"], input[type="time"], .date-field {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: isolate !important;
+  font-variant-numeric: tabular-nums;
+  min-width: 9.5rem;
+}
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+input[type="date"]::-webkit-calendar-picker-indicator { margin-inline-start: 6px; opacity: .7; }
+
+/* بطاقة للنصوص العائمة (أبعاد الترحيل وأمثالها) */
+.fp-dims {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r-md) !important;
+  box-shadow: var(--sh-1) !important;
+}
+.fp-dims > span { color: var(--ink-3); font-weight: 700; font-size: .85rem; }
+.fp-dims label {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--surface-3); border: 1px solid var(--line);
+  border-radius: var(--r-pill); padding: 4px 12px;
+}
+.fp-dims input[type="checkbox"] { accent-color: var(--brand); }
+
+/* سطر الإجماليات أسفل الشاشة: بطاقة أيضًا */
+.draft-limit-note, .fp-note:not(.fp-error) {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r-sm) !important;
+  padding: 8px 12px !important;
+  display: inline-block;
+  box-shadow: var(--sh-1);
+}
+
+/* ============================================================================
+   v6 — طبقة الذكاء: اقتراحات · تلميحات · لوحة أوامر
+   ========================================================================== */
+.smart-suggest {
+  position: absolute;
+  z-index: 90;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  box-shadow: var(--sh-4);
+  overflow: hidden;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.smart-suggest.hidden { display: none; }
+.smart-suggest button {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  width: 100%; border: 0 !important; border-radius: 0 !important;
+  background: transparent !important; box-shadow: none !important;
+  padding: 9px 12px !important; text-align: start; cursor: pointer;
+}
+.smart-suggest button:hover, .smart-suggest button:focus {
+  background: var(--brand-soft) !important;
+}
+.smart-suggest .s-val { font-weight: 600; color: var(--ink); }
+.smart-suggest small { color: var(--ink-3); font-size: .72rem; white-space: nowrap; }
+
+.smart-tip {
+  position: absolute; z-index: 95; pointer-events: none;
+  background: #2b2f36; color: #f3f5f7;
+  padding: 6px 10px; border-radius: 8px;
+  font-size: .75rem; max-width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .22);
+}
+.smart-tip.hidden { display: none; }
+
+.cmd-overlay {
+  position: fixed; inset: 0; z-index: 120;
+  background: rgba(28, 31, 36, .45);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding-top: 12vh;
+}
+.cmd-box {
+  width: min(560px, 92vw);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-4);
+  overflow: hidden;
+}
+.cmd-input {
+  width: 100%; border: 0 !important; border-radius: 0 !important;
+  box-shadow: none !important; border-bottom: 1px solid var(--line) !important;
+  padding: 14px 16px !important; font-size: 1rem;
+}
+.cmd-list { max-height: 46vh; overflow-y: auto; }
+.cmd-list button {
+  display: block; width: 100%; text-align: start;
+  border: 0 !important; border-radius: 0 !important;
+  background: transparent !important; box-shadow: none !important;
+  padding: 10px 16px !important;
+}
+.cmd-list button:hover { background: var(--brand-soft) !important; }
+
+/* v6b — إخفاء نص الحالة داخل شاشة المالية + رمادي فاتح لكل الحاويات الرئيسية */
+#finance-screen-status, .finance-screen-heading span { display: none !important; }
+.app-shell, .workspace, main, main.layout, .layout, .finance-workbench,
+.finance-room-header, .finance-indicators, .finance-tab-bar,
+#view-home, #view-journals, #view-accounts, #view-ledger, #view-periods,
+#view-vouchers, #view-detail, .split-view, .content, .page {
+  background: var(--paper) !important;
+}
+.finance-indicators > div, .finance-room-main, .finance-tab-bar button {
+  background: var(--surface) !important;
+}
+.finance-tab-bar { background: var(--paper-2) !important; }
